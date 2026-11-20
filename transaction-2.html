@@ -30,7 +30,7 @@
       <div class="side-label">Akun</div>
       <ul class="side-nav">
         <li><a href="points.html">Loop Points</a></li>        <li><a href="leaderboard.html">Peringkat</a></li>        <li><a href="vouchers.html">Voucher saya</a></li>        <li><a href="profile.html">Profil</a></li>        <li>
-          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79">            <button type="submit">Keluar</button>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="256cc29a635e9c78b3efe5fe9ed90925">            <button type="submit">Keluar</button>
           </form>
         </li>
       </ul>
@@ -93,16 +93,16 @@
       <section class="card">
         <div class="card-title"><h2>Bukti transfer dari Dimas Aditya</h2><span class="badge badge-info">Bukti dikirim</span></div>
                   <a href="uploads/proofs/tx2.png" target="_blank" class="proof-preview"><img src="uploads/proofs/tx2.png" alt="Bukti transfer"></a>
-          <p class="hint">Dikirim 19 Nov 2026, 20.34 · klik gambar untuk memperbesar</p>
+          <p class="hint">Dikirim 19 Nov 2026, 21.11 · klik gambar untuk memperbesar</p>
                 <div style="display:flex;gap:10px;flex-wrap:wrap">
           <form action="#demo-transaction_action" method="post" onsubmit="return confirm('Konfirmasi bahwa Rp120.000 sudah masuk ke rekeningmu?')">
-            <input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79"><input type="hidden" name="transaction_id" value="2"><input type="hidden" name="do" value="verify_confirm">
+            <input type="hidden" name="csrf" value="256cc29a635e9c78b3efe5fe9ed90925"><input type="hidden" name="transaction_id" value="2"><input type="hidden" name="do" value="verify_confirm">
             <button class="btn btn-primary" type="submit">Pembayaran sesuai</button>
           </form>
           <button class="btn btn-danger" type="button" onclick="showRejectForm()">Tolak bukti</button>
         </div>
         <form id="rejectForm" class="hidden" action="#demo-transaction_action" method="post" onsubmit="return validateReject()" style="margin-top:16px">
-          <input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79"><input type="hidden" name="transaction_id" value="2"><input type="hidden" name="do" value="verify_reject">
+          <input type="hidden" name="csrf" value="256cc29a635e9c78b3efe5fe9ed90925"><input type="hidden" name="transaction_id" value="2"><input type="hidden" name="do" value="verify_reject">
           <label for="rejection_reason">Alasan penolakan <span class="required">*</span></label>
           <textarea class="input" id="rejection_reason" name="rejection_reason" maxlength="255" style="min-height:80px" placeholder="Contoh: nominal yang masuk Rp100.000, kurang Rp10.000."></textarea>
           <p class="error-text hidden" id="rejection_reasonError"></p>
@@ -116,8 +116,8 @@
   <section class="card">
     <div class="card-title"><h2>Riwayat</h2></div>
     <ul class="item-list small">
-      <li class="item-row"><div class="info"><strong>Request disetujui</strong><small>18 Nov 2026, 16.34</small></div></li>
-              <li class="item-row"><div class="info"><strong>Bukti transfer dikirim</strong><small>19 Nov 2026, 20.34</small></div></li>
+      <li class="item-row"><div class="info"><strong>Request disetujui</strong><small>18 Nov 2026, 17.11</small></div></li>
+              <li class="item-row"><div class="info"><strong>Bukti transfer dikirim</strong><small>19 Nov 2026, 21.11</small></div></li>
                                               </ul>
   </section>
   </div>

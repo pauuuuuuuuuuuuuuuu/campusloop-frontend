@@ -30,7 +30,7 @@
       <div class="side-label">Akun</div>
       <ul class="side-nav">
         <li><a href="points.html">Loop Points</a></li>        <li><a href="leaderboard.html">Peringkat</a></li>        <li><a href="vouchers.html">Voucher saya</a></li>        <li><a href="profile.html" class="active" aria-current="page">Profil</a></li>        <li>
-          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79">            <button type="submit">Keluar</button>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="256cc29a635e9c78b3efe5fe9ed90925">            <button type="submit">Keluar</button>
           </form>
         </li>
       </ul>
@@ -126,7 +126,7 @@
 
   <div class="stack">
     <form class="card" action="#demo-profile_save" method="post">
-      <input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79"><input type="hidden" name="section" value="account">
+      <input type="hidden" name="csrf" value="256cc29a635e9c78b3efe5fe9ed90925"><input type="hidden" name="section" value="account">
       <div class="card-title"><h2>Data akun</h2></div>
       <div class="form-group"><label for="name">Nama lengkap</label><input class="input" id="name" name="name" value="Nadia Putri" maxlength="100" required></div>
       <div class="form-group"><label for="email">Email</label><input class="input" id="email" type="email" value="nadia.putri@binus.ac.id" disabled><p class="hint">Email tidak bisa diubah.</p></div>
@@ -135,7 +135,7 @@
     </form>
 
     <form class="card" action="#demo-profile_save" method="post">
-      <input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79"><input type="hidden" name="section" value="bank">
+      <input type="hidden" name="csrf" value="256cc29a635e9c78b3efe5fe9ed90925"><input type="hidden" name="section" value="bank">
       <div class="card-title"><h2> Rekening penerima</h2></div>
       <p class="small muted">Dipakai saat kamu menjual barang dengan transfer. Hanya terlihat oleh pembeli yang request-nya kamu setujui.</p>
       <div class="form-group"><label for="bank_name">Bank / e-wallet</label>
@@ -148,7 +148,7 @@
     </form>
 
     <form class="card" action="#demo-profile_save" method="post" onsubmit="return setError('new_password', document.getElementById('new_password').value.length < 8 ? 'Password baru minimal 8 karakter.' : '')">
-      <input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79"><input type="hidden" name="section" value="password">
+      <input type="hidden" name="csrf" value="256cc29a635e9c78b3efe5fe9ed90925"><input type="hidden" name="section" value="password">
       <div class="card-title"><h2> Ganti password</h2></div>
       <div class="form-group"><label for="current_password">Password sekarang</label><input class="input" id="current_password" name="current_password" type="password" autocomplete="current-password" required></div>
       <div class="form-group"><label for="new_password">Password baru</label><input class="input" id="new_password" name="new_password" type="password" autocomplete="new-password" required><p class="error-text hidden" id="new_passwordError"></p></div>
