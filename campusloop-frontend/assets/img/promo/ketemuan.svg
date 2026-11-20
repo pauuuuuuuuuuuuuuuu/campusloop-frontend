@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img" aria-label="Ilustrasi titik temu di gedung kampus">
+  <path d="M34 110c4-52 74-80 150-80 82 0 146 30 148 92 2 60-56 104-142 106-84 2-160-32-156-118Z" fill="#DFEFEA"/>
+  <!-- tanah -->
+  <path d="M30 214h300" stroke="#17211E" stroke-width="3" stroke-linecap="round"/>
+  <!-- gedung kampus -->
+  <path d="M104 96 178 60l74 36Z" fill="#1A5E4F" stroke="#17211E" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="112" y="96" width="132" height="12" fill="#0F3D33" stroke="#17211E" stroke-width="3"/>
+  <rect x="112" y="108" width="132" height="106" fill="#fff" stroke="#17211E" stroke-width="3"/>
+  <g fill="#E5E8F5" stroke="#17211E" stroke-width="2.5">
+    <rect x="124" y="120" width="22" height="26" rx="2"/><rect x="167" y="120" width="22" height="26" rx="2"/><rect x="210" y="120" width="22" height="26" rx="2"/>
+  </g>
+  <path d="M164 214v-44a14 14 0 0 1 28 0v44" fill="#F0A92E" stroke="#17211E" stroke-width="3"/>
+  <path d="M136 160v54M220 160v54" stroke="#DCE3E0" stroke-width="5"/>
+  <!-- pin lokasi -->
+  <g transform="translate(272 64)">
+    <path d="M0 52C-18 30-26 18-26 4a26 26 0 0 1 52 0c0 14-8 26-26 48Z" fill="#C4513D" stroke="#17211E" stroke-width="3" stroke-linejoin="round"/>
+    <circle cy="4" r="9" fill="#fff" stroke="#17211E" stroke-width="3"/>
+  </g>
+  <path d="M272 126c-6 26-24 46-58 62" fill="none" stroke="#C4513D" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 9"/>
+  <!-- pohon -->
+  <circle cx="72" cy="160" r="26" fill="#1A5E4F" stroke="#17211E" stroke-width="3"/>
+  <path d="M72 186v28" stroke="#17211E" stroke-width="4" stroke-linecap="round"/>
+  <!-- bangku -->
+  <g stroke="#17211E" stroke-width="3" stroke-linecap="round">
+    <rect x="262" y="186" width="58" height="8" rx="3" fill="#F0A92E"/>
+    <path d="M270 194v20M312 194v20M266 176h50"/>
+  </g>
+</svg>

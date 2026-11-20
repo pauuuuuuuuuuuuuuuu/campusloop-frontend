@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Peringkat Loop Points · CampusLoop</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Menu aplikasi">
+    <a href="dashboard.html" class="logo">
+      <img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+          <div class="side-label">Utama</div>
+      <ul class="side-nav">
+        <li><a href="dashboard.html">Dashboard</a></li>        <li><a href="browse.html">Jelajahi barang</a></li>        <li><a href="loopguide.html">LoopGuide</a></li>      </ul>
+      <div class="side-label">Aktivitas saya</div>
+      <ul class="side-nav">
+        <li><a href="my-listings.html">Listing saya</a></li>        <li><a href="requests.html">Request<span class="pill">2</span></a></li>        <li><a href="transactions.html">Transaksi</a></li>      </ul>
+      <div class="side-label">Akun</div>
+      <ul class="side-nav">
+        <li><a href="points.html">Loop Points</a></li>        <li><a href="leaderboard.html" class="active" aria-current="page">Peringkat</a></li>        <li><a href="vouchers.html">Voucher saya</a></li>        <li><a href="profile.html">Profil</a></li>        <li>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14">            <button type="submit">Keluar</button>
+          </form>
+        </li>
+      </ul>
+      <a href="points.html" class="side-points">
+        <span class="small muted">Saldo Loop Points</span>
+        <span class="num">105</span>
+        <span class="small muted">
+          95 poin lagi ke voucher Rp10.000        </span>
+      </a>
+      </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+
+              <form class="search input-icon" action="browse.html" method="get" role="search">
+          <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg>          <input class="input" type="search" name="q" value="" placeholder="Cari buku, kalkulator, jas lab..." aria-label="Cari barang">
+        </form>
+        <a href="listing-form.html" class="btn btn-primary topbar-cta"><span>Tawarkan barang</span></a>
+      
+      <a class="user-chip" href="profile.html">
+        <span class="avatar">NP</span>
+        <div>
+          <strong>Nadia Putri</strong>
+          <small>Information Systems</small>
+        </div>
+      </a>
+    </header>
+
+    <main class="app-content" id="konten">
+      
+<div class="app-head">
+  <div><h1>Peringkat Loop Points</h1><p>Mahasiswa paling aktif berbagi barang di CampusLoop.</p></div>
+</div>
+
+<nav class="seg-tabs" aria-label="Periode peringkat">
+  <a href="leaderboard.html" class="">Bulan ini</a>
+  <a href="leaderboard-period-all.html" class="active">Sepanjang waktu</a>
+</nav>
+
+<section class="lb-hero">
+  <!-- Piala digambar dengan SVG sendiri -->
+  <svg class="lb-trophy" viewBox="0 0 160 160" role="img" aria-label="Piala">
+    <defs>
+      <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".5" stop-color="#F0A92E"/><stop offset="1" stop-color="#C9811A"/></linearGradient>
+      <linearGradient id="goldDark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D99423"/><stop offset="1" stop-color="#A86A12"/></linearGradient>
+    </defs>
+    <path d="M44 34H22c0 26 10 40 30 42" fill="none" stroke="url(#goldDark)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M116 34h22c0 26-10 40-30 42" fill="none" stroke="url(#goldDark)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M42 22h76v30c0 24-17 42-38 42S42 76 42 52Z" fill="url(#gold)"/>
+    <path d="M54 30v22c0 14 8 26 18 30" fill="none" stroke="#FFF3C4" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <rect x="72" y="92" width="16" height="22" fill="url(#goldDark)"/>
+    <path d="M56 114h48l6 14H50Z" fill="url(#gold)"/>
+    <rect x="44" y="128" width="72" height="14" rx="4" fill="#1A5E4F"/>
+    <path d="M80 38l5 10 11 1.6-8 7.8 1.9 11L80 63.2 70.1 68.4 72 57.4l-8-7.8 11-1.6Z" fill="#FFF8DC"/>
+  </svg>
+  <div>
+    <span class="lb-kicker">Sepanjang waktu</span>
+    <h2>Clarissa Wijaya memimpin dengan 330 poin</h2>
+    <p class="muted">Peringkat dihitung dari poin yang didapat. Menukar poin ke voucher tidak menurunkan peringkatmu.</p>
+  </div>
+</section>
+
+<section class="podium" aria-label="Tiga besar">
+      <div class="podium-col place-2 ">
+      <span class="podium-avatar">AR<span class="medal">2</span></span>
+      <strong class="podium-name">Alya Rahmawati</strong>
+      <span class="small muted">Information Systems</span>
+      <span class="podium-score">315 <small>poin</small></span>
+      <div class="podium-block"><span>#2</span></div>
+    </div>
+      <div class="podium-col place-1 ">
+      <span class="podium-avatar">CW<span class="medal">1</span></span>
+      <strong class="podium-name">Clarissa Wijaya</strong>
+      <span class="small muted">Accounting</span>
+      <span class="podium-score">330 <small>poin</small></span>
+      <div class="podium-block"><span>#1</span></div>
+    </div>
+      <div class="podium-col place-3 ">
+      <span class="podium-avatar">IP<span class="medal">3</span></span>
+      <strong class="podium-name">Intan Permata</strong>
+      <span class="small muted">Communication</span>
+      <span class="podium-score">230 <small>poin</small></span>
+      <div class="podium-block"><span>#3</span></div>
+    </div>
+  </section>
+
+<div class="grid-2 lb-grid">
+  <section class="card">
+    <div class="card-title"><h2>Peringkat lainnya</h2><span class="small muted">17 mahasiswa</span></div>
+          <ol class="rank-list">
+                  <li class="">
+            <span class="rank-no">4</span>
+            <span class="avatar">BS</span>
+            <div class="info"><strong>Bima Saputra</strong><small>Computer Science · 20 aktivitas</small></div>
+            <strong class="rank-score">195</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">5</span>
+            <span class="avatar">GA</span>
+            <div class="info"><strong>Gita Anjani</strong><small>Information Systems · 17 aktivitas</small></div>
+            <strong class="rank-score">175</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">6</span>
+            <span class="avatar">FN</span>
+            <div class="info"><strong>Fajar Nugroho</strong><small>Management · 14 aktivitas</small></div>
+            <strong class="rank-score">135</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">7</span>
+            <span class="avatar">PM</span>
+            <div class="info"><strong>Putri Maharani</strong><small>Communication · 12 aktivitas</small></div>
+            <strong class="rank-score">110</strong>
+          </li>
+                  <li class="is-me">
+            <span class="rank-no">8</span>
+            <span class="avatar">NP</span>
+            <div class="info"><strong>Nadia Putri (kamu)</strong><small>Information Systems · 9 aktivitas</small></div>
+            <strong class="rank-score">105</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">9</span>
+            <span class="avatar">JT</span>
+            <div class="info"><strong>Joshua Tanoto</strong><small>Computer Science · 8 aktivitas</small></div>
+            <strong class="rank-score">95</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">10</span>
+            <span class="avatar">HK</span>
+            <div class="info"><strong>Hendra Kusuma</strong><small>Business Information Technology · 10 aktivitas</small></div>
+            <strong class="rank-score">90</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">11</span>
+            <span class="avatar">LS</span>
+            <div class="info"><strong>Laras Setyowati</strong><small>Accounting · 9 aktivitas</small></div>
+            <strong class="rank-score">75</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">12</span>
+            <span class="avatar">RR</span>
+            <div class="info"><strong>Rizky Ramadhan</strong><small>Management · 7 aktivitas</small></div>
+            <strong class="rank-score">70</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">13</span>
+            <span class="avatar">YP</span>
+            <div class="info"><strong>Yoga Prasetyo</strong><small>Computer Science · 3 aktivitas</small></div>
+            <strong class="rank-score">35</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">14</span>
+            <span class="avatar">RP</span>
+            <div class="info"><strong>Raka Pratama</strong><small>Computer Science · 4 aktivitas</small></div>
+            <strong class="rank-score">30</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">15</span>
+            <span class="avatar">SW</span>
+            <div class="info"><strong>Sari Wulandari</strong><small>Accounting · 2 aktivitas</small></div>
+            <strong class="rank-score">15</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">16</span>
+            <span class="avatar">DA</span>
+            <div class="info"><strong>Dimas Aditya</strong><small>Management · 1 aktivitas</small></div>
+            <strong class="rank-score">5</strong>
+          </li>
+                  <li class="">
+            <span class="rank-no">17</span>
+            <span class="avatar">KS</span>
+            <div class="info"><strong>Kevin Santoso</strong><small>Business Information Technology · 1 aktivitas</small></div>
+            <strong class="rank-score">5</strong>
+          </li>
+              </ol>
+      </section>
+
+  <aside class="stack">
+    <section class="card my-rank">
+      <span class="small muted">Posisimu sepanjang waktu</span>
+              <div class="my-rank-num">#8</div>
+        <span>105 poin dari 9 aktivitas</span>
+                  <p class="hint">10 poin lagi untuk menyalip Putri Maharani.</p>                    <a href="points.html" class="btn btn-outline btn-block" style="margin-top:12px">Lihat & tukar poinku</a>
+    </section>
+    <section class="card">
+      <div class="card-title"><h2>Cara naik peringkat</h2></div>
+      <table class="table"><tbody>
+        <tr><td>Donasi selesai</td><td style="text-align:right"><strong>+20</strong></td></tr>
+        <tr><td>Jual-beli selesai</td><td style="text-align:right"><strong>+10</strong></td></tr>
+        <tr><td>Pinjaman kembali tepat waktu</td><td style="text-align:right"><strong>+10</strong></td></tr>
+        <tr><td>Memberi review</td><td style="text-align:right"><strong>+5</strong></td></tr>
+      </tbody></table>
+    </section>
+  </aside>
+</div>
+
+    </main>
+  </div>
+</div>
+
+<nav class="bottom-nav" aria-label="Navigasi cepat">
+      <a href="dashboard.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-grid"></use></svg></span>
+      <span class="tab-label">Beranda</span>
+          </a>
+      <a href="browse.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg></span>
+      <span class="tab-label">Jelajahi</span>
+          </a>
+      <a href="listing-form.html" class="tab-main">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></span>
+      <span class="tab-label">Tawarkan</span>
+          </a>
+      <a href="transactions.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-receipt"></use></svg></span>
+      <span class="tab-label">Transaksi</span>
+      <span class="tab-badge">2</span>    </a>
+      <a href="profile.html" class=" active" aria-current="page">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-user"></use></svg></span>
+      <span class="tab-label">Akun</span>
+          </a>
+  </nav>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/static-demo.js"></script>
+</body>
+</html>

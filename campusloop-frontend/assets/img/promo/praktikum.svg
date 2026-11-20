@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img" aria-label="Ilustrasi jas lab dan labu praktikum">
+  <path d="M50 76c22-40 96-54 160-44 64 10 120 40 120 96 0 58-56 100-140 100-86 0-154-32-158-90-2-24 6-46 18-62Z" fill="#E5E8F5"/>
+  <!-- gantungan -->
+  <path d="M168 34a12 12 0 1 1 12 12v12" fill="none" stroke="#17211E" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M120 82l60-24 60 24" fill="none" stroke="#17211E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- jas lab -->
+  <path d="M138 70l42 26 42-26 34 20 14 120h-30l-6-72v84h-108v-84l-6 72h-30l14-120Z" fill="#fff" stroke="#17211E" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M180 96v122" stroke="#17211E" stroke-width="2.5"/>
+  <path d="M158 80l22 46 22-46" fill="none" stroke="#17211E" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="196" y="140" width="22" height="16" rx="2" fill="#E5E8F5" stroke="#17211E" stroke-width="2.5"/>
+  <path d="M202 140v-10M208 140v-6" stroke="#3D4F9F" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#17211E"><circle cx="186" cy="150" r="2.5"/><circle cx="186" cy="174" r="2.5"/><circle cx="186" cy="198" r="2.5"/></g>
+  <!-- labu erlenmeyer -->
+  <g transform="translate(286 150)">
+    <path d="M-10-40h20M-7-40v26l-22 44a8 8 0 0 0 7 12h44a8 8 0 0 0 7-12l-22-44v-26" fill="#fff" stroke="#17211E" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-19 12h38l9 18a8 8 0 0 1-7 12h-42a8 8 0 0 1-7-12Z" fill="#1A5E4F"/>
+    <circle cx="-4" cy="-24" r="4" fill="none" stroke="#3D4F9F" stroke-width="2.5"/>
+    <circle cx="6" cy="-36" r="3" fill="none" stroke="#3D4F9F" stroke-width="2.5"/>
+  </g>
+  <!-- tag durasi -->
+  <g transform="rotate(10 82 120)">
+    <rect x="44" y="98" width="78" height="40" rx="6" fill="#F0A92E" stroke="#17211E" stroke-width="3"/>
+    <text x="83" y="124" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#0F3D33" text-anchor="middle">14 hari</text>
+  </g>
+  <path d="M122 118c6-8 10-14 18-20" fill="none" stroke="#17211E" stroke-width="2.5" stroke-dasharray="3 5"/>
+</svg>

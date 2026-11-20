@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Kategori · CampusLoop</title>
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Menu aplikasi">
+    <a href="index.html" class="logo">
+      <img src="../assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+          <div class="side-label">Admin</div>
+      <ul class="side-nav">
+        <li><a href="index.html">Dashboard</a></li>        <li><a href="reports.html">Laporan &amp; moderasi<span class="pill">2</span></a></li>        <li><a href="users.html">Kelola user</a></li>        <li><a href="listings.html">Kelola listing</a></li>        <li><a href="categories.html" class="active" aria-current="page">Kategori</a></li>        <li><a href="rewards.html">Reward &amp; voucher</a></li>      </ul>
+      <div class="side-label">Lainnya</div>
+      <ul class="side-nav">
+        <li><a href="../index.html">Lihat situs</a></li>        <li>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d">            <button type="submit">Keluar</button>
+          </form>
+        </li>
+      </ul>
+      </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"></use></svg></button>
+
+              <strong class="topbar-title">Panel admin</strong>
+      
+      <a class="user-chip" href="index.html">
+        <span class="avatar">A</span>
+        <div>
+          <strong>Administrator</strong>
+          <small>Administrator</small>
+        </div>
+      </a>
+    </header>
+
+    <main class="app-content" id="konten">
+      
+<div class="app-head"><div><h1>Kategori</h1><p>Kategori membantu user menyaring barang di halaman Jelajahi.</p></div></div>
+
+<div class="grid-2">
+  <section class="card">
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th>Nama</th><th>Label tampilan</th><th>Kelompok</th><th>Dipakai</th><th><span class="sr-only">Aksi</span></th></tr></thead>
+        <tbody>
+                      <tr class="">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Books</strong></div></td>
+              <td>Buku</td>
+              <td><span class="badge badge-info">Akademik</span></td>
+              <td class="muted">5 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-1.html">Edit</a>
+                                  </div>
+              </td>
+            </tr>
+                      <tr class="admin-edit-row">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Calculators</strong></div></td>
+              <td>Kalkulator</td>
+              <td><span class="badge badge-info">Akademik</span></td>
+              <td class="muted">3 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-2.html">Edit</a>
+                                  </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Stationery</strong></div></td>
+              <td>Alat tulis</td>
+              <td><span class="badge badge-info">Akademik</span></td>
+              <td class="muted">1 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-3.html">Edit</a>
+                                  </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Academic Equipment</strong></div></td>
+              <td>Alat praktikum</td>
+              <td><span class="badge badge-info">Akademik</span></td>
+              <td class="muted">1 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-4.html">Edit</a>
+                                  </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Electronics</strong></div></td>
+              <td>Elektronik</td>
+              <td><span class="badge badge-neutral">Pakai ulang</span></td>
+              <td class="muted">4 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-5.html">Edit</a>
+                                  </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Furniture</strong></div></td>
+              <td>Perabot kos</td>
+              <td><span class="badge badge-neutral">Pakai ulang</span></td>
+              <td class="muted">2 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-6.html">Edit</a>
+                                  </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Clothes</strong></div></td>
+              <td>Pakaian</td>
+              <td><span class="badge badge-neutral">Pakai ulang</span></td>
+              <td class="muted">1 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-7.html">Edit</a>
+                                  </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Bags &amp; Accessories</strong></div></td>
+              <td>Tas &amp; aksesori</td>
+              <td><span class="badge badge-neutral">Pakai ulang</span></td>
+              <td class="muted">2 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-8.html">Edit</a>
+                                  </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><div class="owner-row"><span class="avatar" style="border-radius:10px"></span><strong>Other</strong></div></td>
+              <td>Lainnya</td>
+              <td><span class="badge badge-neutral">Pakai ulang</span></td>
+              <td class="muted">0 listing</td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="categories-edit-9.html">Edit</a>
+                                      <form action="#demo-admin" method="post" onsubmit="return confirm('Hapus kategori Other?')">
+                      <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="category_delete"><input type="hidden" name="category_id" value="9">
+                      <button class="btn btn-danger btn-sm" type="submit" >Hapus</button>
+                    </form>
+                                  </div>
+              </td>
+            </tr>
+                  </tbody>
+      </table>
+    </div>
+  </section>
+
+  <form class="card" action="#demo-admin" method="post">
+    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d">    <input type="hidden" name="do" value="category_save">
+    <input type="hidden" name="category_id" value="2">
+    <div class="card-title"><h2>Edit kategori</h2><a href="categories.html" class="small">Batal</a></div>
+    <div class="form-group"><label for="category_name">Nama kategori <span class="required">*</span></label><input class="input" id="category_name" name="category_name" maxlength="50" value="Calculators" required></div>
+    <div class="form-group"><label for="category_group">Kelompok <span class="required">*</span></label>
+      <select class="input" id="category_group" name="category_group">
+        <option value="academic" selected>Akademik</option>
+        <option value="reusable" >Barang pakai ulang</option>
+      </select></div>
+    <div class="form-group"><label for="description">Deskripsi</label><textarea class="input" id="description" name="description" maxlength="255" style="min-height:80px">Kalkulator untuk kebutuhan perkuliahan.</textarea></div>
+    <button class="btn btn-primary" type="submit">Simpan perubahan</button>
+    <p class="hint">Kategori yang sudah dipakai listing tidak bisa dihapus (foreign key RESTRICT).</p>
+  </form>
+</div>
+
+    </main>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/static-demo.js"></script>
+</body>
+</html>

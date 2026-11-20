@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Masuk · CampusLoop</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="auth-page">
+  <aside class="auth-side">
+  <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span></a>
+  <div>
+    <h2>Satu akun untuk menawarkan dan mencari barang kuliah.</h2>
+    <ul>
+      <li><span>Jual, donasikan, atau pinjamkan barang ke sesama mahasiswa</span></li>
+      <li><span>Status transaksi dan bukti bayar tercatat rapi</span></li>
+      <li><span>Kumpulkan Loop Points, tukar dengan voucher</span></li>
+    </ul>
+  </div>
+  <p class="small" style="margin:0">Mendukung SDG 4 Pendidikan Berkualitas dan SDG 12 Konsumsi Bertanggung Jawab.</p>
+</aside>
+  <main class="auth-main" id="konten">
+    <div class="auth-box">
+      <a href="index.html" class="breadcrumb"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-left"></use></svg>Kembali ke beranda</a>
+      <h1>Masuk ke CampusLoop</h1>
+      <p class="muted">Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+
+      
+      <form action="#demo-login" method="post" onsubmit="return validateLogin()" novalidate>
+        <input type="hidden" name="csrf" value="06a5cd1187fbb971d13033fa2a8aaa3c">        <div class="form-group">
+          <label for="email">Email kampus</label>
+          <div class="input-icon">
+                        <input class="input" type="email" id="email" name="email" placeholder="nama@binus.ac.id"
+                   value="" autocomplete="email" required>
+          </div>
+          <p class="error-text hidden" id="emailError"></p>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrap input-icon">
+                        <input class="input" type="password" id="password" name="password" placeholder="Password kamu" autocomplete="current-password" required>
+            <button type="button" class="toggle-pass" onclick="togglePassword('password', this)" aria-label="Tampilkan password"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg></button>
+          </div>
+          <p class="error-text hidden" id="passwordError"></p>
+        </div>
+        <label class="check-row"><input type="checkbox" name="remember" value="1" > Ingat saya di perangkat ini</label>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Masuk</button>
+      </form>
+
+      <div class="alert alert-info" style="margin-top:20px">        <span class="small">Akun demo (password <strong>password123</strong>): nadia.putri@binus.ac.id, raka.pratama@binus.ac.id, admin@campusloop.ac.id</span>
+      </div>
+      <p class="hint">Akun yang ditangguhkan admin tidak dapat masuk. Hubungi halo@campusloop.ac.id bila merasa ini keliru.</p>
+    </div>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/static-demo.js"></script>
+</body>
+</html>

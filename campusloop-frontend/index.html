@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Barang kuliah berputar, bukan menumpuk · CampusLoop</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="CampusLoop beranda">
+      <img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="browse.html" class="">Jelajahi barang</a>
+      <a href="index.html#cara-kerja">Cara kerja</a>
+      <a href="index.html#keunggulan">Keunggulan</a>
+      <a href="about.html" class="">Tentang</a>
+    </nav>
+
+    <div class="header-actions">
+              <a href="login.html" class="btn btn-ghost">Masuk</a>
+        <a href="register.html" class="btn btn-primary">Daftar gratis</a>
+          </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+  </div>
+</header>
+
+<main id="konten">
+
+
+<!-- HERO ================================================================ -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow"> Khusus mahasiswa, pakai email kampus</span>
+      <h1>Barang kuliahmu masih berguna. <em>Biarkan berputar.</em></h1>
+      <p class="hero-lead">Jual, donasikan, atau pinjamkan buku, kalkulator, dan alat praktikum ke sesama mahasiswa. Semua tercatat jelas, dari request sampai barang diterima.</p>
+
+      <form class="hero-search" action="browse.html" method="get" role="search">
+        <div class="input-icon">
+          <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg>          <input class="input" type="search" name="q" placeholder="Butuh apa? Contoh: kalkulator scientific" aria-label="Cari barang">
+        </div>
+        <button class="btn btn-primary" type="submit">Cari barang</button>
+      </form>
+
+      <div class="hero-chips">
+        <span>Sering dicari:</span>
+        <a class="chip" href="browse-category-1.html">Buku kuliah</a>
+        <a class="chip" href="browse-category-2.html">Kalkulator</a>
+        <a class="chip" href="browse-q-jas-lab.html">Jas lab</a>
+        <a class="chip" href="browse-type-donate.html">Barang gratis</a>
+      </div>
+
+      <dl class="hero-stats">
+        <div><dt>Barang tersedia</dt><dd>10</dd></div>
+        <div><dt>Transaksi selesai</dt><dd>6</dd></div>
+        <div><dt>Mahasiswa bergabung</dt><dd>17</dd></div>
+      </dl>
+    </div>
+
+    <!-- Ilustrasi produk: contoh kartu listing & status transaksi -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-card hv-listing">
+        <div class="thumb"><img src="assets/img/listings/listing-01.jpg" alt=""><span class="badge badge-sell">Jual</span></div>
+        <div class="body">
+          <div class="row"><strong>Casio fx-991ID Plus</strong></div>
+          <div class="row"><span style="font-weight:800;font-size:1.1rem">Rp75.000</span><span class="badge badge-success">Tersedia</span></div>
+          <div class="seller"><span class="avatar">RP</span> Raka P. <span class="stars" aria-label="Rating 4.6 dari 5"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg></span> <span class="muted">4.6</span></div>
+        </div>
+      </div>
+      <div class="hv-card hv-status">
+        <span class="dot"></span>
+        <div><strong style="font-size:.9rem">Request disetujui</strong><br><span class="small muted">Lanjut ke pembayaran</span></div>
+      </div>
+      <div class="hv-card hv-points">
+        <span class="small muted">Loop Points kamu</span>
+        <div class="num">140</div>
+        <div class="bar"><span></span></div>
+        <span class="small muted">60 poin lagi ke voucher Rp10.000</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO & PROMO (carousel geser samping) ============================= -->
+<section class="promo-section">
+  <div class="container">
+    <section class="promo" aria-roledescription="carousel" aria-label="Info dan promo CampusLoop" data-slider>
+  <div class="promo-track" id="promoTrack" tabindex="0">
+          <article class="promo-slide tone-lime" aria-roledescription="slide"
+               aria-label="1 dari 5">
+        <div class="promo-text">
+          <span class="promo-kicker">Musim ujian</span>
+          <h3>Kalkulator cuma kepake pas UTS? Pinjam aja.</h3>
+          <p>Banyak kalkulator scientific dan finansial nganggur di kos kakak tingkat. Pinjam gratis, kembalikan sesuai tanggal.</p>
+          <a class="btn promo-btn" href="browse-type-borrow.html">Cari barang pinjaman </a>
+        </div>
+        <img class="promo-art" src="assets/img/promo/ujian.svg" alt="Kalkulator, kertas ujian, dan label pinjam 7 hari"
+             width="360" height="260"  draggable="false">
+      </article>
+          <article class="promo-slide tone-mint" aria-roledescription="slide"
+               aria-label="2 dari 5">
+        <div class="promo-text">
+          <span class="promo-kicker">Donasi buku</span>
+          <h3>Buku semester lalu bisa jadi bekal adik tingkat.</h3>
+          <p>Setiap donasi yang selesai memberi +20 Loop Points, poin terbesar dibanding aktivitas lain.</p>
+          <a class="btn promo-btn" href="listing-form-type-donate.html">Donasikan barang </a>
+        </div>
+        <img class="promo-art" src="assets/img/promo/buku.svg" alt="Tumpukan buku dengan panah melingkar dan koin +20"
+             width="360" height="260" loading="lazy" draggable="false">
+      </article>
+          <article class="promo-slide tone-peach" aria-roledescription="slide"
+               aria-label="3 dari 5">
+        <div class="promo-text">
+          <span class="promo-kicker">Loop Points</span>
+          <h3>Kumpulkan 100 poin, tukar voucher Rp5.000.</h3>
+          <p>Poin datang dari jual, donasi, pinjam, dan memberi review. Vouchernya berlaku di barang yang menerima voucher.</p>
+          <a class="btn promo-btn" href="points.html">Lihat poinku </a>
+        </div>
+        <img class="promo-art" src="assets/img/promo/voucher.svg" alt="Voucher potongan Rp5.000 dan tumpukan koin"
+             width="360" height="260" loading="lazy" draggable="false">
+      </article>
+          <article class="promo-slide tone-rose" aria-roledescription="slide"
+               aria-label="4 dari 5">
+        <div class="promo-text">
+          <span class="promo-kicker">Ketemuan aman</span>
+          <h3>COD di titik ramai kampus, bukan di gang sepi.</h3>
+          <p>Pilih perpustakaan, lobi gedung, atau kantin. Tekan &quot;Barang diterima&quot; hanya setelah barang ada di tanganmu.</p>
+          <a class="btn promo-btn" href="index.html#cara-kerja">Lihat cara kerja </a>
+        </div>
+        <img class="promo-art" src="assets/img/promo/ketemuan.svg" alt="Gedung kampus dengan penanda lokasi dan bangku"
+             width="360" height="260" loading="lazy" draggable="false">
+      </article>
+          <article class="promo-slide tone-mist" aria-roledescription="slide"
+               aria-label="5 dari 5">
+        <div class="promo-text">
+          <span class="promo-kicker">Praktikum</span>
+          <h3>Jas lab cuma dipakai satu semester, lalu menggantung di lemari.</h3>
+          <p>Pinjamkan ke adik tingkat yang baru mulai praktikum. Kamu yang menentukan durasinya, maksimal 60 hari.</p>
+          <a class="btn promo-btn" href="listing-form-type-borrow.html">Pinjamkan barang </a>
+        </div>
+        <img class="promo-art" src="assets/img/promo/praktikum.svg" alt="Jas lab di gantungan, labu praktikum, dan label 14 hari"
+             width="360" height="260" loading="lazy" draggable="false">
+      </article>
+      </div>
+
+  <div class="promo-controls">
+    <button type="button" class="promo-arrow" data-dir="-1" aria-label="Slide sebelumnya"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-left"></use></svg></button>
+    <div class="promo-dots" role="tablist" aria-label="Pilih slide">
+              <button type="button" class="promo-dot active" data-index="0"
+                aria-label="Slide 1: Musim ujian"></button>
+              <button type="button" class="promo-dot" data-index="1"
+                aria-label="Slide 2: Donasi buku"></button>
+              <button type="button" class="promo-dot" data-index="2"
+                aria-label="Slide 3: Loop Points"></button>
+              <button type="button" class="promo-dot" data-index="3"
+                aria-label="Slide 4: Ketemuan aman"></button>
+              <button type="button" class="promo-dot" data-index="4"
+                aria-label="Slide 5: Praktikum"></button>
+          </div>
+    <button type="button" class="promo-arrow" data-dir="1" aria-label="Slide berikutnya"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-right"></use></svg></button>
+  </div>
+</section>
+  </div>
+</section>
+
+<!-- TIGA CARA BERBAGI =================================================== -->
+<section class="section" id="tipe">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Tiga cara berbagi</span>
+      <h2>Pilih cara yang paling pas untuk barangmu</h2>
+      <p>Setiap listing punya tipe. Tipe menentukan alurnya, jadi kamu dan pihak lain selalu tahu langkah berikutnya.</p>
+    </div>
+    <div class="type-grid">
+      <article class="type-card sell">
+        <div class="type-icon"></div>
+        <h3>Jual</h3>
+        <p class="muted">Dapat uang tambahan dari barang yang sudah tidak dipakai.</p>
+        <ul>
+          <li>Bayar transfer dengan bukti, atau COD di kampus</li>
+          <li>Penjual memverifikasi bukti bayar</li>
+          <li>Bisa menerima voucher CampusLoop</li>
+        </ul>
+      </article>
+      <article class="type-card donate">
+        <div class="type-icon"></div>
+        <h3>Donasi</h3>
+        <p class="muted">Berikan gratis ke adik tingkat atau teman yang lebih butuh.</p>
+        <ul>
+          <li>Tanpa pembayaran sama sekali</li>
+          <li>Pilih sendiri penerima dari request yang masuk</li>
+          <li>Poin terbesar: +20 per donasi selesai</li>
+        </ul>
+      </article>
+      <article class="type-card borrow">
+        <div class="type-icon"></div>
+        <h3>Pinjam</h3>
+        <p class="muted">Pinjamkan barang yang hanya dipakai sesekali, gratis.</p>
+        <ul>
+          <li>Kamu tentukan durasi maksimal pinjam</li>
+          <li>Tanggal kembali tercatat di sistem</li>
+          <li>Selesai setelah kamu konfirmasi barang kembali</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- KEUNGGULAN: PERBANDINGAN ============================================ -->
+<section class="section section-alt" id="keunggulan">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Kenapa CampusLoop</span>
+      <h2>Lebih tertata dari jual-beli di grup chat</h2>
+      <p>Selama ini barang kuliah berpindah tangan lewat grup WhatsApp dan story Instagram. Cepat, tapi mudah tenggelam dan sulit dipercaya.</p>
+    </div>
+    <div class="compare table-wrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Yang kamu butuhkan</th><th scope="col">Grup chat & story</th><th scope="col" class="us">CampusLoop</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mencari barang tertentu</td><td class="no">Scroll chat lama satu per satu</td><td class="us">Cari dan filter per kategori, tipe, harga</td></tr>
+          <tr><td>Tahu status barang</td><td class="no">"Masih ada kak?" berulang kali</td><td class="us">Status tersedia, dipesan, atau selesai</td></tr>
+          <tr><td>Bukti pembayaran</td><td class="no">Tercecer di chat pribadi</td><td class="us">Tersimpan dan diverifikasi penjual</td></tr>
+          <tr><td>Percaya ke pihak lain</td><td class="no">Hanya modal kenal atau tidak</td><td class="us">Rating dua arah dan riwayat transaksi</td></tr>
+          <tr><td>Kalau ada masalah</td><td class="no">Tidak ada yang menengahi</td><td class="us">Laporan ditinjau admin</td></tr>
+          <tr><td>Dihargai karena berbagi</td><td class="no">Tidak ada</td><td class="us">Loop Points yang bisa ditukar voucher</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CARA KERJA ========================================================== -->
+<section class="section" id="cara-kerja">
+  <div class="container">
+    <div class="section-head center">
+      <span class="kicker">Cara kerja</span>
+      <h2>Empat langkah dari request sampai selesai</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Cari atau tawarkan</h3>
+        <p>Temukan barang lewat pencarian, atau unggah barangmu dengan foto, kondisi, dan lokasi ketemuan.</p>
+      </li>
+      <li>
+        <h3>Kirim request</h3>
+        <p>Pemilik barang memilih request yang disetujui. Request lain otomatis ditutup.</p>
+      </li>
+      <li>
+        <h3>Bayar atau serah terima</h3>
+        <p>Untuk barang jual, transfer ke rekening penjual lalu unggah bukti. Penjual memverifikasi dari mutasi rekeningnya, atau bayar tunai saat bertemu.</p>
+      </li>
+      <li>
+        <h3>Konfirmasi dan beri rating</h3>
+        <p>Transaksi selesai setelah penerima menekan "Barang diterima". Lalu saling beri rating.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FITUR =============================================================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Fitur</span>
+      <h2>Dibuat untuk kebiasaan mahasiswa</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature"><div class="f-icon"></div><div><h3>Bukti bayar terverifikasi</h3><p>Penjual mengecek bukti transfer. Jika ditolak, alasannya wajib ditulis.</p></div></div>
+      <div class="feature"><div class="f-icon"></div><div><h3>Bisa COD di kampus</h3><p>Tidak mau transfer? Pilih bayar tunai saat ketemuan di perpustakaan atau kantin.</p></div></div>
+      <div class="feature"><div class="f-icon"></div><div><h3>Rating dua arah</h3><p>Pembeli dan penjual saling menilai, jadi reputasi terbentuk dari transaksi nyata.</p></div></div>
+      <div class="feature"><div class="f-icon"></div><div><h3>LoopGuide</h3><p>Tanya dengan kalimat biasa, misalnya "kalkulator di bawah 100 ribu", dan dapatkan hasilnya.</p></div></div>
+      <div class="feature"><div class="f-icon"></div><div><h3>Laporan ke admin</h3><p>Listing palsu atau janji temu yang tidak ditepati bisa dilaporkan dan ditindaklanjuti.</p></div></div>
+      <div class="feature"><div class="f-icon"></div><div><h3>Rekening tidak dipajang</h3><p>Info rekening penjual hanya muncul untuk pembeli yang request-nya disetujui.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOOP POINTS ========================================================= -->
+<section class="section" id="loop-points">
+  <div class="container">
+    <div class="points-band">
+      <div>
+        <span class="kicker" style="color:var(--sun-500)">Loop Points</span>
+        <h2>Setiap barang yang berputar menambah poinmu</h2>
+        <p>Kumpulkan poin dari transaksi yang selesai, lalu tukar dengan voucher potongan harga untuk barang jual yang menerima voucher.</p>
+        <a href="register.html" class="btn btn-accent btn-lg">Mulai kumpulkan poin </a>
+      </div>
+      <table class="points-table">
+        <tr><td>Donasi selesai</td><td>+20</td></tr>
+        <tr><td>Jual-beli selesai (penjual &amp; pembeli)</td><td>+10</td></tr>
+        <tr><td>Pinjaman dikembalikan tepat waktu</td><td>+10</td></tr>
+        <tr><td>Memberi rating dan review</td><td>+5</td></tr>
+        <tr><td>Tukar 100 / 200 / 400 poin</td><td>Rp5rb / 10rb / 20rb</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- LISTING TERBARU ===================================================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="result-bar">
+      <div class="section-head" style="margin:0">
+        <span class="kicker">Baru diunggah</span>
+        <h2 style="margin:0">Barang dari teman kampusmu</h2>
+      </div>
+      <a href="browse.html" class="btn btn-outline">Lihat semua barang </a>
+    </div>
+    <div class="listing-grid" style="margin-top:24px">
+              <a class="listing-card" href="listing-16.html"><div class="thumb t-coral"><img src="assets/img/listings/listing-16.jpg" alt="" loading="lazy"><span class="badge badge-donate">Donasi</span></div><div class="body"><span class="title">Tas totebag kanvas</span><span class="price free">Gratis</span><span class="small muted">Baik</span><span class="meta">Kantin kampus</span></div></a>              <a class="listing-card" href="listing-14.html"><div class="thumb t-indigo"><img src="assets/img/listings/listing-14.jpg" alt="" loading="lazy"><span class="badge badge-sell">Jual</span></div><div class="body"><span class="title">Lampu belajar LED lipat</span><span class="price">Rp45.000</span><span class="small muted">Seperti baru</span><span class="meta">Lobi gedung kampus</span></div></a>              <a class="listing-card" href="listing-15.html"><div class="thumb t-indigo"><img src="assets/img/listings/listing-15.jpg" alt="" loading="lazy"><span class="badge badge-borrow">Pinjam</span></div><div class="body"><span class="title">Casio fx-570EX</span><span class="price borrow">Pinjam gratis · maks. 7 hari</span><span class="small muted">Baik</span><span class="meta">Gedung kampus lt. 3</span></div></a>              <a class="listing-card" href="listing-7.html"><div class="thumb t-indigo"><img src="assets/img/listings/listing-07.jpg" alt="" loading="lazy"><span class="badge badge-sell">Jual</span></div><div class="body"><span class="title">Mouse wireless Logitech M185</span><span class="price">Rp85.000</span><span class="small muted">Baik</span><span class="meta">Perpustakaan lt. 1</span></div></a>          </div>
+      </div>
+</section>
+
+<!-- SDG ================================================================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Dampak</span>
+      <h2>Kenapa ini penting</h2>
+      <p>CampusLoop mendukung dua Tujuan Pembangunan Berkelanjutan (SDGs) PBB.</p>
+    </div>
+    <div class="sdg-grid">
+      <div class="sdg-card">
+        <div class="sdg-num sdg-4"><small>SDG</small><b>4</b></div>
+        <div><h3>Pendidikan berkualitas</h3><p class="muted" style="margin:0">Buku dan alat kuliah jadi lebih terjangkau lewat barang bekas, donasi, dan pinjaman gratis. Biaya tidak lagi jadi penghalang untuk belajar.</p></div>
+      </div>
+      <div class="sdg-card">
+        <div class="sdg-num sdg-12"><small>SDG</small><b>12</b></div>
+        <div><h3>Konsumsi bertanggung jawab</h3><p class="muted" style="margin:0">Barang yang masih layak dipakai ulang, bukan dibuang atau menumpuk di kos. Satu jas lab bisa dipakai banyak mahasiswa.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ ================================================================= -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <span class="kicker">Pertanyaan umum</span>
+      <h2>Yang sering ditanyakan</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Apakah CampusLoop memegang uang pembayaran? <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-down"></use></svg></summary>
+        <p>Tidak. Pembayaran dilakukan langsung ke penjual lewat transfer atau tunai. CampusLoop mencatat bukti dan status verifikasinya agar kedua pihak punya pegangan.</p>
+      </details>
+      <details>
+        <summary>Siapa yang bisa mendaftar? <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-down"></use></svg></summary>
+        <p>Mahasiswa aktif dengan NIM. Satu akun bisa dipakai untuk menawarkan barang sekaligus meminta barang.</p>
+      </details>
+      <details>
+        <summary>Bagaimana jika barang tidak sesuai atau pihak lain tidak datang? <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-down"></use></svg></summary>
+        <p>Buka transaksi terkait lalu tekan "Laporkan". Admin akan meninjau dan bisa menonaktifkan listing atau menangguhkan akun.</p>
+      </details>
+      <details>
+        <summary>Apakah meminjam barang dikenai biaya? <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-down"></use></svg></summary>
+        <p>Tidak. Semua peminjaman gratis. Pemilik menentukan durasi maksimal, dan peminjam memilih tanggal kembali saat request.</p>
+      </details>
+      <details>
+        <summary>Voucher bisa dipakai di semua barang? <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-down"></use></svg></summary>
+        <p>Hanya di barang jual yang penjualnya mengaktifkan "Terima voucher". Penjual mendapat +15 poin sebagai kompensasi, dan potongan maksimal 50% dari harga.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA ================================================================= -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Ada barang kuliah yang cuma jadi pajangan di kos?</h2>
+      <p>Unggah dalam dua menit. Siapa tahu itu yang sedang dicari adik tingkatmu.</p>
+      <div class="hero-cta">
+        <a href="listing-form.html" class="btn btn-primary btn-lg">Tawarkan barang</a>
+        <a href="browse.html" class="btn btn-outline btn-lg">Jelajahi dulu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span></a>
+        <p style="margin-top:14px;max-width:320px">Share. Learn. Reuse. Platform pertukaran barang kuliah khusus mahasiswa, dibuat untuk final project Programming for Business.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="browse.html">Jelajahi barang</a></li>
+          <li><a href="listing-form.html">Tawarkan barang</a></li>
+          <li><a href="index.html#loop-points">Loop Points</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="index.html#cara-kerja">Cara kerja</a></li>
+          <li><a href="index.html#faq">Pertanyaan umum</a></li>
+          <li><a href="about.html">Tentang kami</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li> halo@campusloop.ac.id</li>
+          <li> BINUS @Semarang</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CampusLoop. Mendukung SDG 4 dan SDG 12.</span>
+      <span>Dibuat dengan HTML, CSS, JavaScript, PHP &amp; MySQL</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/static-demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Jelajahi barang · CampusLoop</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="CampusLoop beranda">
+      <img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="browse.html" class="active">Jelajahi barang</a>
+      <a href="index.html#cara-kerja">Cara kerja</a>
+      <a href="index.html#keunggulan">Keunggulan</a>
+      <a href="about.html" class="">Tentang</a>
+    </nav>
+
+    <div class="header-actions">
+              <a href="login.html" class="btn btn-ghost">Masuk</a>
+        <a href="register.html" class="btn btn-primary">Daftar gratis</a>
+          </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+  </div>
+</header>
+
+<main id="konten">
+<div class="container">
+<div class="page-head">
+  <h1 style="margin-bottom:4px">Jelajahi barang</h1>
+  <p class="muted" style="margin:0">Barang dari mahasiswa yang masih tersedia untuk di-request.</p>
+</div>
+
+<div class="browse-layout">
+  <!-- FILTER -->
+  <aside class="card filter-panel" aria-label="Filter">
+    <button type="button" class="filter-toggle" aria-expanded="false" aria-controls="filterForm"
+            onclick="this.parentElement.classList.toggle('open'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('open'))">
+      Filter (aktif) <svg class="icon icon-sm" aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-down"></use></svg>    </button>
+    <form action="browse.html" method="get" id="filterForm">
+      <h3 class="filter-title">Filter</h3>
+
+      <div class="filter-group">
+        <label for="q" class="label">Kata kunci</label>
+        <input class="input" type="search" id="q" name="q" value="jas lab" placeholder="Judul atau deskripsi">
+      </div>
+
+      <div class="filter-group">
+        <span class="label">Tipe</span>
+                  <label class="check-row"><input type="radio" name="type" value="" checked onchange="updatePriceFilter()"> Semua tipe</label>
+                  <label class="check-row"><input type="radio" name="type" value="sell"  onchange="updatePriceFilter()"> Jual</label>
+                  <label class="check-row"><input type="radio" name="type" value="donate"  onchange="updatePriceFilter()"> Donasi (gratis)</label>
+                  <label class="check-row"><input type="radio" name="type" value="borrow"  onchange="updatePriceFilter()"> Pinjam (gratis)</label>
+              </div>
+
+      <div class="filter-group">
+        <label for="category" class="label">Kategori</label>
+        <select class="input" id="category" name="category">
+          <option value="">Semua kategori</option>
+                      <optgroup label="Akademik">
+                              <option value="1" >Buku</option>
+                              <option value="2" >Kalkulator</option>
+                              <option value="3" >Alat tulis</option>
+                              <option value="4" >Alat praktikum</option>
+                          </optgroup>
+                      <optgroup label="Barang pakai ulang">
+                              <option value="5" >Elektronik</option>
+                              <option value="6" >Perabot kos</option>
+                              <option value="7" >Pakaian</option>
+                              <option value="8" >Tas &amp; aksesori</option>
+                              <option value="9" >Lainnya</option>
+                          </optgroup>
+                  </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="label">Kondisi</span>
+                  <label class="check-row"><input type="checkbox" name="condition[]" value="new" > Baru</label>
+                  <label class="check-row"><input type="checkbox" name="condition[]" value="like_new" > Seperti baru</label>
+                  <label class="check-row"><input type="checkbox" name="condition[]" value="good" > Baik</label>
+                  <label class="check-row"><input type="checkbox" name="condition[]" value="fair" > Layak pakai</label>
+              </div>
+
+      <div class="filter-group " id="priceFilter">
+        <span class="label">Harga (Rp)</span>
+        <div class="form-row" style="gap:8px">
+          <input class="input" type="number" name="min_price" min="0" step="1000" placeholder="Min" value="" aria-label="Harga minimum">
+          <input class="input" type="number" name="max_price" min="0" step="1000" placeholder="Maks" value="" aria-label="Harga maksimum">
+        </div>
+      </div>
+
+      <input type="hidden" name="sort" value="newest">
+      <button type="submit" class="btn btn-primary btn-block">Terapkan filter</button>
+      <a href="browse.html" class="btn btn-ghost btn-block" style="margin-top:6px">Reset</a>
+    </form>
+  </aside>
+
+  <!-- HASIL -->
+  <section>
+    <div class="result-bar">
+      <span class="muted"><strong style="color:var(--ink)">1 barang</strong> ditemukan untuk "jas lab"</span>
+      <form action="browse.html" method="get" style="min-width:200px">
+                    <input type="hidden" name="q" value="jas lab">
+                <label for="sort" class="sr-only">Urutkan</label>
+        <select class="input" id="sort" name="sort" onchange="this.form.submit()">
+          <option value="newest" selected>Urutkan: terbaru</option>
+          <option value="cheapest" >Urutkan: termurah</option>
+        </select>
+      </form>
+    </div>
+
+          <div class="listing-grid cols-3">
+        <a class="listing-card" href="listing-3.html"><div class="thumb "><img src="assets/img/listings/listing-03.jpg" alt="" loading="lazy"><span class="badge badge-borrow">Pinjam</span></div><div class="body"><span class="title">Jas lab putih ukuran M</span><span class="price borrow">Pinjam gratis · maks. 14 hari</span><span class="small muted">Seperti baru</span><span class="meta">Lobi gedung kampus</span></div></a>      </div>
+
+            </section>
+</div>
+
+</div></main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span></a>
+        <p style="margin-top:14px;max-width:320px">Share. Learn. Reuse. Platform pertukaran barang kuliah khusus mahasiswa, dibuat untuk final project Programming for Business.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="browse.html">Jelajahi barang</a></li>
+          <li><a href="listing-form.html">Tawarkan barang</a></li>
+          <li><a href="index.html#loop-points">Loop Points</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="index.html#cara-kerja">Cara kerja</a></li>
+          <li><a href="index.html#faq">Pertanyaan umum</a></li>
+          <li><a href="about.html">Tentang kami</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li> halo@campusloop.ac.id</li>
+          <li> BINUS @Semarang</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CampusLoop. Mendukung SDG 4 dan SDG 12.</span>
+      <span>Dibuat dengan HTML, CSS, JavaScript, PHP &amp; MySQL</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/static-demo.js"></script>
+</body>
+</html>

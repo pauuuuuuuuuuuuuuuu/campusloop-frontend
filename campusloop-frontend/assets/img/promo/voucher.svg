@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img" aria-label="Ilustrasi voucher potongan dan koin poin">
+  <path d="M40 92c10-44 84-64 150-58 76 6 140 26 146 84 6 56-40 104-120 112-74 8-158-6-174-58-6-22-8-54-2-80Z" fill="#FDF0D8"/>
+  <!-- voucher -->
+  <g transform="rotate(-7 170 124)">
+    <path d="M70 76h200a10 10 0 0 1 10 10v22a16 16 0 0 0 0 32v22a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10v-22a16 16 0 0 0 0-32V86a10 10 0 0 1 10-10Z" fill="#fff" stroke="#17211E" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M70 76h62v96H70a10 10 0 0 1-10-10v-22a16 16 0 0 0 0-32V86a10 10 0 0 1 10-10Z" fill="#F0A92E" stroke="#17211E" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M132 84v80" stroke="#17211E" stroke-width="3" stroke-dasharray="6 6"/>
+    <text x="103" y="116" font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="#0F3D33" text-anchor="middle" letter-spacing="1">POTONG</text>
+    <text x="103" y="140" font-family="Arial, sans-serif" font-weight="700" font-size="21" fill="#0F3D33" text-anchor="middle">5K</text>
+    <text x="150" y="112" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#17211E">Rp5.000</text>
+    <rect x="150" y="124" width="96" height="8" rx="4" fill="#DCE3E0"/>
+    <rect x="150" y="140" width="64" height="8" rx="4" fill="#DCE3E0"/>
+  </g>
+  <!-- tumpukan koin -->
+  <g stroke="#17211E" stroke-width="3">
+    <ellipse cx="268" cy="214" rx="34" ry="10" fill="#C9861A"/>
+    <path d="M234 200v14c0 6 15 10 34 10s34-4 34-10v-14" fill="#F0A92E"/>
+    <ellipse cx="268" cy="200" rx="34" ry="10" fill="#F0A92E"/>
+    <path d="M234 186v14c0 6 15 10 34 10s34-4 34-10v-14" fill="#F0A92E"/>
+    <ellipse cx="268" cy="186" rx="34" ry="10" fill="#FDE3AE"/>
+  </g>
+  <g transform="translate(304 70)">
+    <circle r="22" fill="#F0A92E" stroke="#17211E" stroke-width="3"/>
+    <path d="M-8 2l6 6 11-14" fill="none" stroke="#0F3D33" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="58" y="222" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#1A5E4F">100 poin</text>
+  <path d="M148 216h40" stroke="#1A5E4F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M180 208l9 8-9 8" fill="none" stroke="#1A5E4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

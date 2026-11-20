@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Request · CampusLoop</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Menu aplikasi">
+    <a href="dashboard.html" class="logo">
+      <img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+          <div class="side-label">Utama</div>
+      <ul class="side-nav">
+        <li><a href="dashboard.html">Dashboard</a></li>        <li><a href="browse.html">Jelajahi barang</a></li>        <li><a href="loopguide.html">LoopGuide</a></li>      </ul>
+      <div class="side-label">Aktivitas saya</div>
+      <ul class="side-nav">
+        <li><a href="my-listings.html">Listing saya</a></li>        <li><a href="requests.html" class="active" aria-current="page">Request<span class="pill">2</span></a></li>        <li><a href="transactions.html">Transaksi</a></li>      </ul>
+      <div class="side-label">Akun</div>
+      <ul class="side-nav">
+        <li><a href="points.html">Loop Points</a></li>        <li><a href="leaderboard.html">Peringkat</a></li>        <li><a href="vouchers.html">Voucher saya</a></li>        <li><a href="profile.html">Profil</a></li>        <li>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14">            <button type="submit">Keluar</button>
+          </form>
+        </li>
+      </ul>
+      <a href="points.html" class="side-points">
+        <span class="small muted">Saldo Loop Points</span>
+        <span class="num">105</span>
+        <span class="small muted">
+          95 poin lagi ke voucher Rp10.000        </span>
+      </a>
+      </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+
+              <form class="search input-icon" action="browse.html" method="get" role="search">
+          <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg>          <input class="input" type="search" name="q" value="" placeholder="Cari buku, kalkulator, jas lab..." aria-label="Cari barang">
+        </form>
+        <a href="listing-form.html" class="btn btn-primary topbar-cta"><span>Tawarkan barang</span></a>
+      
+      <a class="user-chip" href="profile.html">
+        <span class="avatar">NP</span>
+        <div>
+          <strong>Nadia Putri</strong>
+          <small>Information Systems</small>
+        </div>
+      </a>
+    </header>
+
+    <main class="app-content" id="konten">
+      
+<div class="app-head">
+  <div><h1>Request</h1><p>Request masuk untuk barangmu, dan request yang kamu kirim ke orang lain.</p></div>
+</div>
+
+<div class="tabs" role="tablist">
+  <button class="tab-btn active" role="tab" aria-selected="true" data-panel="tabIn" onclick="showTab(this, 'tabIn')">Masuk <span class="count">2</span></button>
+  <button class="tab-btn " role="tab" aria-selected="false" data-panel="tabOut" onclick="showTab(this, 'tabOut')">Terkirim <span class="count">4</span></button>
+</div>
+
+<!-- REQUEST MASUK -->
+<section id="tabIn" role="tabpanel" class="">
+  <div class="alert alert-info"><span>Saat kamu menyetujui satu request, request lain untuk barang yang sama otomatis ditolak.</span></div>
+    <div class="stack">
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">DA</span>
+          <div class="info">
+            <strong>Dimas Aditya <span class="muted" style="font-weight:400">ingin meminjam</span> Jas lab putih ukuran M</strong>
+            <small>20 Nov 2026 · Kembali 27 Nov 2026</small>
+            <p class="note-box">"Kak, boleh pinjam seminggu?"</p>          </div>
+          <div class="right"><span class="badge badge-warning">Menunggu</span></div>
+        </div>
+                  <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap">
+            <form action="#demo-request_decide" method="post" onsubmit="return confirm('Tolak request dari Dimas Aditya?')">
+              <input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14"><input type="hidden" name="request_id" value="10"><input type="hidden" name="decision" value="reject">
+              <button class="btn btn-danger btn-sm" type="submit">Tolak</button>
+            </form>
+            <form action="#demo-request_decide" method="post" onsubmit="return confirm('Setujui request dari Dimas Aditya? Request lain untuk barang ini akan ditolak.')">
+              <input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14"><input type="hidden" name="request_id" value="10"><input type="hidden" name="decision" value="approve">
+              <button class="btn btn-primary btn-sm" type="submit">Setujui</button>
+            </form>
+          </div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">SW</span>
+          <div class="info">
+            <strong>Sari Wulandari <span class="muted" style="font-weight:400">ingin meminjam</span> Jas lab putih ukuran M</strong>
+            <small>19 Nov 2026 · Kembali 26 Nov 2026</small>
+            <p class="note-box">"Untuk praktikum Kimia Dasar minggu ini."</p>          </div>
+          <div class="right"><span class="badge badge-warning">Menunggu</span></div>
+        </div>
+                  <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap">
+            <form action="#demo-request_decide" method="post" onsubmit="return confirm('Tolak request dari Sari Wulandari?')">
+              <input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14"><input type="hidden" name="request_id" value="9"><input type="hidden" name="decision" value="reject">
+              <button class="btn btn-danger btn-sm" type="submit">Tolak</button>
+            </form>
+            <form action="#demo-request_decide" method="post" onsubmit="return confirm('Setujui request dari Sari Wulandari? Request lain untuk barang ini akan ditolak.')">
+              <input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14"><input type="hidden" name="request_id" value="9"><input type="hidden" name="decision" value="approve">
+              <button class="btn btn-primary btn-sm" type="submit">Setujui</button>
+            </form>
+          </div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">DA</span>
+          <div class="info">
+            <strong>Dimas Aditya <span class="muted" style="font-weight:400">ingin membeli</span> Ransel laptop 15 inci</strong>
+            <small>17 Nov 2026</small>
+            <p class="note-box">"Masih ada kak? Mau buat bawa laptop ke kampus."</p>          </div>
+          <div class="right"><span class="badge badge-success">Disetujui</span></div>
+        </div>
+                  <div style="text-align:right;margin-top:12px"><a href="transaction-2.html" class="btn btn-outline btn-sm">Buka transaksi</a></div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">DA</span>
+          <div class="info">
+            <strong>Dimas Aditya <span class="muted" style="font-weight:400">ingin menerima</span> Buku Fisika Dasar (Halliday) Jilid 1</strong>
+            <small>14 Nov 2026</small>
+            <p class="note-box">"Aku mau kak, buat mata kuliah Fisika."</p>          </div>
+          <div class="right"><span class="badge badge-success">Disetujui</span></div>
+        </div>
+                  <div style="text-align:right;margin-top:12px"><a href="transaction-5.html" class="btn btn-outline btn-sm">Buka transaksi</a></div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">RP</span>
+          <div class="info">
+            <strong>Raka Pratama <span class="muted" style="font-weight:400">ingin meminjam</span> Kalkulator finansial HP 10bII+</strong>
+            <small>13 Nov 2026 · Kembali 22 Nov 2026</small>
+            <p class="note-box">"Boleh pinjam untuk UTS Manajemen Keuangan?"</p>          </div>
+          <div class="right"><span class="badge badge-success">Disetujui</span></div>
+        </div>
+                  <div style="text-align:right;margin-top:12px"><a href="transaction-4.html" class="btn btn-outline btn-sm">Buka transaksi</a></div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">DA</span>
+          <div class="info">
+            <strong>Dimas Aditya <span class="muted" style="font-weight:400">ingin meminjam</span> Kalkulator finansial HP 10bII+</strong>
+            <small>13 Nov 2026 · Kembali 21 Nov 2026</small>
+            <p class="note-box">"Mau pinjam juga untuk kuis."</p>          </div>
+          <div class="right"><span class="badge badge-danger">Ditolak</span></div>
+        </div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">SW</span>
+          <div class="info">
+            <strong>Sari Wulandari <span class="muted" style="font-weight:400">ingin membeli</span> Modul Statistika Bisnis</strong>
+            <small>27 Okt 2026</small>
+            <p class="note-box">"Bisa COD di kantin?"</p>          </div>
+          <div class="right"><span class="badge badge-success">Disetujui</span></div>
+        </div>
+                  <div style="text-align:right;margin-top:12px"><a href="transaction-6.html" class="btn btn-outline btn-sm">Buka transaksi</a></div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">RP</span>
+          <div class="info">
+            <strong>Raka Pratama <span class="muted" style="font-weight:400">ingin meminjam</span> Jas lab putih ukuran M</strong>
+            <small>15 Okt 2026 · Kembali 26 Okt 2026</small>
+            <p class="note-box">"Pinjam untuk praktikum Kimia 10 hari ya."</p>          </div>
+          <div class="right"><span class="badge badge-success">Disetujui</span></div>
+        </div>
+                  <div style="text-align:right;margin-top:12px"><a href="transaction-7.html" class="btn btn-outline btn-sm">Buka transaksi</a></div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">SW</span>
+          <div class="info">
+            <strong>Sari Wulandari <span class="muted" style="font-weight:400">ingin menerima</span> Rak buku kecil 3 susun</strong>
+            <small>10 Okt 2026</small>
+            <p class="note-box">"Mau raknya untuk kos baru."</p>          </div>
+          <div class="right"><span class="badge badge-success">Disetujui</span></div>
+        </div>
+                  <div style="text-align:right;margin-top:12px"><a href="transaction-10.html" class="btn btn-outline btn-sm">Buka transaksi</a></div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">RP</span>
+          <div class="info">
+            <strong>Raka Pratama <span class="muted" style="font-weight:400">ingin membeli</span> Flashdisk 32GB</strong>
+            <small>6 Okt 2026</small>
+            <p class="note-box">"Flashdisk masih ada?"</p>          </div>
+          <div class="right"><span class="badge badge-success">Disetujui</span></div>
+        </div>
+                  <div style="text-align:right;margin-top:12px"><a href="transaction-9.html" class="btn btn-outline btn-sm">Buka transaksi</a></div>
+              </article>
+          <article class="card">
+        <div class="item-row" style="padding:0;border:0;align-items:flex-start">
+          <span class="avatar">KS</span>
+          <div class="info">
+            <strong>Kevin Santoso <span class="muted" style="font-weight:400">ingin menerima</span> Buku Pengantar Manajemen</strong>
+            <small>2 Okt 2026</small>
+            <p class="note-box">"Aku mau bukunya kak."</p>          </div>
+          <div class="right"><span class="badge badge-success">Disetujui</span></div>
+        </div>
+                  <div style="text-align:right;margin-top:12px"><a href="transaction-8.html" class="btn btn-outline btn-sm">Buka transaksi</a></div>
+              </article>
+      </div>
+</section>
+
+<!-- REQUEST TERKIRIM -->
+<section id="tabOut" role="tabpanel" class="hidden">
+  <div class="card">
+          <ul class="item-list">
+                  <li class="item-row">
+            <div class="mini-thumb"><div class="thumb t-sun"><img src="assets/img/listings/listing-04.jpg" alt="" loading="lazy"></div></div>
+            <div class="info"><strong>Meja lipat belajar</strong><small>Ke Dimas Aditya · 19 Nov 2026</small></div>
+            <div class="right">
+              <span class="badge badge-warning">Menunggu</span>                              <form action="#demo-request_cancel" method="post" onsubmit="return confirm('Batalkan request ini?')">
+                  <input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14"><input type="hidden" name="request_id" value="11">
+                  <button class="btn btn-ghost btn-sm" type="submit">Batalkan</button>
+                </form>
+                          </div>
+          </li>
+                  <li class="item-row">
+            <div class="mini-thumb"><div class="thumb t-indigo"><img src="assets/img/listings/listing-01.jpg" alt="" loading="lazy"></div></div>
+            <div class="info"><strong>Casio fx-991ID Plus</strong><small>Ke Raka Pratama · 18 Nov 2026</small></div>
+            <div class="right">
+              <span class="badge badge-success">Disetujui</span>                              <a href="transaction-1.html" class="btn btn-primary btn-sm">Lihat transaksi</a>
+                          </div>
+          </li>
+                  <li class="item-row">
+            <div class="mini-thumb"><div class="thumb t-sun"><img src="assets/img/listings/listing-10.jpg" alt="" loading="lazy"></div></div>
+            <div class="info"><strong>Set drawing pen &amp; penggaris</strong><small>Ke Sari Wulandari · 18 Nov 2026</small></div>
+            <div class="right">
+              <span class="badge badge-success">Disetujui</span>                              <a href="transaction-3.html" class="btn btn-primary btn-sm">Lihat transaksi</a>
+                          </div>
+          </li>
+                  <li class="item-row">
+            <div class="mini-thumb"><div class="thumb t-coral"><img src="assets/img/listings/listing-06.jpg" alt="" loading="lazy"></div></div>
+            <div class="info"><strong>Kemeja batik almamater (L)</strong><small>Ke Sari Wulandari · 12 Nov 2026</small></div>
+            <div class="right">
+              <span class="badge badge-neutral">Dibatalkan</span>                          </div>
+          </li>
+              </ul>
+      </div>
+</section>
+
+    </main>
+  </div>
+</div>
+
+<nav class="bottom-nav" aria-label="Navigasi cepat">
+      <a href="dashboard.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-grid"></use></svg></span>
+      <span class="tab-label">Beranda</span>
+          </a>
+      <a href="browse.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg></span>
+      <span class="tab-label">Jelajahi</span>
+          </a>
+      <a href="listing-form.html" class="tab-main">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></span>
+      <span class="tab-label">Tawarkan</span>
+          </a>
+      <a href="transactions.html" class=" active" aria-current="page">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-receipt"></use></svg></span>
+      <span class="tab-label">Transaksi</span>
+      <span class="tab-badge">2</span>    </a>
+      <a href="profile.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-user"></use></svg></span>
+      <span class="tab-label">Akun</span>
+          </a>
+  </nav>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/static-demo.js"></script>
+</body>
+</html>

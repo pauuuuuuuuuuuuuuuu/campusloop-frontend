@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Daftar · CampusLoop</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="auth-page">
+  <aside class="auth-side">
+  <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span></a>
+  <div>
+    <h2>Satu akun untuk menawarkan dan mencari barang kuliah.</h2>
+    <ul>
+      <li><span>Jual, donasikan, atau pinjamkan barang ke sesama mahasiswa</span></li>
+      <li><span>Status transaksi dan bukti bayar tercatat rapi</span></li>
+      <li><span>Kumpulkan Loop Points, tukar dengan voucher</span></li>
+    </ul>
+  </div>
+  <p class="small" style="margin:0">Mendukung SDG 4 Pendidikan Berkualitas dan SDG 12 Konsumsi Bertanggung Jawab.</p>
+</aside>
+  <main class="auth-main" id="konten">
+    <div class="auth-box">
+      <a href="index.html" class="breadcrumb"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-left"></use></svg>Kembali ke beranda</a>
+      <h1>Buat akun mahasiswa</h1>
+      <p class="muted">Sudah punya akun? <a href="login.html">Masuk</a></p>
+
+      
+      <form action="#demo-register" method="post" onsubmit="return validateRegister()" novalidate>
+        <input type="hidden" name="csrf" value="06a5cd1187fbb971d13033fa2a8aaa3c">        <div class="form-group">
+          <label for="name">Nama lengkap <span class="required">*</span></label>
+          <input class="input" type="text" id="name" name="name" maxlength="100" autocomplete="name" value="" required>
+          <p class="error-text hidden" id="nameError"></p>
+        </div>
+        <div class="form-group">
+          <label for="email">Email kampus <span class="required">*</span></label>
+          <input class="input" type="email" id="email" name="email" maxlength="150" placeholder="nama@binus.ac.id" autocomplete="email" value="" required>
+          <p class="error-text hidden" id="emailError"></p>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="student_id">NIM <span class="required">*</span></label>
+            <input class="input" type="text" id="student_id" name="student_id" inputmode="numeric" maxlength="10" placeholder="10 digit" value="" required>
+            <p class="error-text hidden" id="student_idError"></p>
+          </div>
+          <div class="form-group">
+            <label for="department">Jurusan</label>
+            <select class="input" id="department" name="department">
+              <option value="">Pilih jurusan</option>
+                              <option >Information Systems</option>
+                              <option >Computer Science</option>
+                              <option >Business Information Technology</option>
+                              <option >Accounting</option>
+                              <option >Management</option>
+                              <option >Business Management &amp; Marketing</option>
+                              <option >Visual Communication Design</option>
+                              <option >Interior Design</option>
+                          </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone_number">Nomor WhatsApp</label>
+          <input class="input" type="tel" id="phone_number" name="phone_number" maxlength="20" placeholder="08xxxxxxxxxx" value="">
+          <p class="hint">Hanya terlihat oleh pihak yang transaksinya sudah disetujui, untuk janji temu.</p>
+        </div>
+        <div class="form-group">
+          <label for="password">Password <span class="required">*</span></label>
+          <div class="password-wrap">
+            <input class="input" type="password" id="password" name="password" autocomplete="new-password" onkeyup="checkStrength(this.value)" required>
+            <button type="button" class="toggle-pass" onclick="togglePassword('password', this)" aria-label="Tampilkan password"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg></button>
+          </div>
+          <p class="hint" id="passStrength">Minimal 8 karakter.</p>
+          <p class="error-text hidden" id="passwordError"></p>
+        </div>
+        <div class="form-group">
+          <label for="password_confirm">Ulangi password <span class="required">*</span></label>
+          <input class="input" type="password" id="password_confirm" name="password_confirm" autocomplete="new-password" required>
+          <p class="error-text hidden" id="password_confirmError"></p>
+        </div>
+        <label class="check-row" for="agree">
+          <input type="checkbox" id="agree" name="agree" value="1">
+          <span>Saya setuju menjaga transaksi tetap jujur dan memahami bahwa CampusLoop tidak memegang uang pembayaran.</span>
+        </label>
+        <p class="error-text hidden" id="agreeError"></p>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:8px">Buat akun</button>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/static-demo.js"></script>
+</body>
+</html>

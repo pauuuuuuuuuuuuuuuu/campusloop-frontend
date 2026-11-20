@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Reward &amp; voucher · CampusLoop</title>
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Menu aplikasi">
+    <a href="index.html" class="logo">
+      <img src="../assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+          <div class="side-label">Admin</div>
+      <ul class="side-nav">
+        <li><a href="index.html">Dashboard</a></li>        <li><a href="reports.html">Laporan &amp; moderasi<span class="pill">2</span></a></li>        <li><a href="users.html">Kelola user</a></li>        <li><a href="listings.html">Kelola listing</a></li>        <li><a href="categories.html">Kategori</a></li>        <li><a href="rewards.html" class="active" aria-current="page">Reward &amp; voucher</a></li>      </ul>
+      <div class="side-label">Lainnya</div>
+      <ul class="side-nav">
+        <li><a href="../index.html">Lihat situs</a></li>        <li>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d">            <button type="submit">Keluar</button>
+          </form>
+        </li>
+      </ul>
+      </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"></use></svg></button>
+
+              <strong class="topbar-title">Panel admin</strong>
+      
+      <a class="user-chip" href="index.html">
+        <span class="avatar">A</span>
+        <div>
+          <strong>Administrator</strong>
+          <small>Administrator</small>
+        </div>
+      </a>
+    </header>
+
+    <main class="app-content" id="konten">
+      
+<div class="app-head"><div><h1>Reward &amp; voucher</h1><p>Atur voucher yang bisa ditukar dengan Loop Points.</p></div></div>
+
+<div class="grid-2">
+  <section class="card">
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th>Reward</th><th>Poin</th><th>Potongan</th><th>Ditukar</th><th>Status</th><th><span class="sr-only">Aksi</span></th></tr></thead>
+        <tbody>
+                      <tr class="">
+              <td><strong>Loop Rp2K</strong></td>
+              <td>50</td>
+              <td>Rp2.000</td>
+              <td class="muted">0x</td>
+              <td><span class="badge badge-success">Aktif</span></td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="rewards-edit-4.html">Edit</a>
+                  <form action="#demo-admin" method="post">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="reward_toggle"><input type="hidden" name="reward_id" value="4">
+                    <button class="btn btn-outline btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><strong>Loop Rp5K</strong></td>
+              <td>100</td>
+              <td>Rp5.000</td>
+              <td class="muted">0x</td>
+              <td><span class="badge badge-success">Aktif</span></td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="rewards-edit-1.html">Edit</a>
+                  <form action="#demo-admin" method="post">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="reward_toggle"><input type="hidden" name="reward_id" value="1">
+                    <button class="btn btn-outline btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><strong>Loop Rp10K</strong></td>
+              <td>200</td>
+              <td>Rp10.000</td>
+              <td class="muted">0x</td>
+              <td><span class="badge badge-success">Aktif</span></td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="rewards-edit-2.html">Edit</a>
+                  <form action="#demo-admin" method="post">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="reward_toggle"><input type="hidden" name="reward_id" value="2">
+                    <button class="btn btn-outline btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+                      <tr class="">
+              <td><strong>Loop Rp15K</strong></td>
+              <td>300</td>
+              <td>Rp15.000</td>
+              <td class="muted">0x</td>
+              <td><span class="badge badge-success">Aktif</span></td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="rewards-edit-5.html">Edit</a>
+                  <form action="#demo-admin" method="post">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="reward_toggle"><input type="hidden" name="reward_id" value="5">
+                    <button class="btn btn-outline btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+                      <tr class="admin-edit-row">
+              <td><strong>Loop Rp20K</strong></td>
+              <td>400</td>
+              <td>Rp20.000</td>
+              <td class="muted">0x</td>
+              <td><span class="badge badge-success">Aktif</span></td>
+              <td>
+                <div class="actions">
+                  <a class="btn btn-ghost btn-sm" href="rewards-edit-3.html">Edit</a>
+                  <form action="#demo-admin" method="post">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="reward_toggle"><input type="hidden" name="reward_id" value="3">
+                    <button class="btn btn-outline btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+                  </tbody>
+      </table>
+    </div>
+    <p class="hint">Reward tidak dihapus karena terhubung ke riwayat penukaran. Nonaktifkan agar tidak bisa ditukar lagi.</p>
+  </section>
+
+  <form class="card" action="#demo-admin" method="post">
+    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d">    <input type="hidden" name="do" value="reward_save">
+    <input type="hidden" name="reward_id" value="3">
+    <div class="card-title"><h2>Edit reward</h2><a href="rewards.html" class="small">Batal</a></div>
+    <div class="form-group"><label for="reward_name">Nama <span class="required">*</span></label><input class="input" id="reward_name" name="reward_name" maxlength="100" placeholder="Contoh: Loop Rp15K" value="Loop Rp20K" required></div>
+    <div class="form-row">
+      <div class="form-group"><label for="points_required">Poin dibutuhkan <span class="required">*</span></label><input class="input" id="points_required" name="points_required" type="number" min="1" value="400" required></div>
+      <div class="form-group"><label for="discount_amount">Potongan (Rp) <span class="required">*</span></label><input class="input" id="discount_amount" name="discount_amount" type="number" min="1000" step="1000" value="20000" required></div>
+    </div>
+    <div class="form-group"><label for="description">Deskripsi</label><input class="input" id="description" name="description" maxlength="255" value="Diskon Rp20.000 untuk listing SELL yang menerima voucher."></div>
+    <label class="check-row"><input type="checkbox" name="status" value="active" checked> Aktifkan sekarang</label>
+    <button class="btn btn-primary" type="submit">Simpan reward</button>
+  </form>
+</div>
+
+    </main>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/static-demo.js"></script>
+</body>
+</html>

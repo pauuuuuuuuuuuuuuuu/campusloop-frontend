@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Transaksi #6 · CampusLoop</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Menu aplikasi">
+    <a href="dashboard.html" class="logo">
+      <img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+          <div class="side-label">Utama</div>
+      <ul class="side-nav">
+        <li><a href="dashboard.html">Dashboard</a></li>        <li><a href="browse.html">Jelajahi barang</a></li>        <li><a href="loopguide.html">LoopGuide</a></li>      </ul>
+      <div class="side-label">Aktivitas saya</div>
+      <ul class="side-nav">
+        <li><a href="my-listings.html">Listing saya</a></li>        <li><a href="requests.html">Request<span class="pill">2</span></a></li>        <li><a href="transactions.html" class="active" aria-current="page">Transaksi</a></li>      </ul>
+      <div class="side-label">Akun</div>
+      <ul class="side-nav">
+        <li><a href="points.html">Loop Points</a></li>        <li><a href="leaderboard.html">Peringkat</a></li>        <li><a href="vouchers.html">Voucher saya</a></li>        <li><a href="profile.html">Profil</a></li>        <li>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14">            <button type="submit">Keluar</button>
+          </form>
+        </li>
+      </ul>
+      <a href="points.html" class="side-points">
+        <span class="small muted">Saldo Loop Points</span>
+        <span class="num">105</span>
+        <span class="small muted">
+          95 poin lagi ke voucher Rp10.000        </span>
+      </a>
+      </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+
+              <form class="search input-icon" action="browse.html" method="get" role="search">
+          <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg>          <input class="input" type="search" name="q" value="" placeholder="Cari buku, kalkulator, jas lab..." aria-label="Cari barang">
+        </form>
+        <a href="listing-form.html" class="btn btn-primary topbar-cta"><span>Tawarkan barang</span></a>
+      
+      <a class="user-chip" href="profile.html">
+        <span class="avatar">NP</span>
+        <div>
+          <strong>Nadia Putri</strong>
+          <small>Information Systems</small>
+        </div>
+      </a>
+    </header>
+
+    <main class="app-content" id="konten">
+      
+<div class="app-head">
+  <div>
+    <nav class="breadcrumb"><a href="transactions.html">Transaksi</a><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-chevron-right"></use></svg><span>#6</span></nav>
+    <h1>Modul Statistika Bisnis</h1>
+    <p><span class="badge badge-sell">Jual</span> &nbsp;Dimulai 28 Okt 2026</p>
+  </div>
+  <span class="badge badge-success">Selesai</span></div>
+
+<div class="card" style="margin-bottom:20px">
+  <ol class="stepper" aria-label="Progres transaksi">
+          <li class="done" >
+        <span class="dot">1</span>Disetujui      </li>
+          <li class="done" >
+        <span class="dot">2</span>Pembayaran      </li>
+          <li class="done" >
+        <span class="dot">3</span>Diverifikasi      </li>
+          <li class="done" >
+        <span class="dot">4</span>Barang diterima      </li>
+          <li class="done" >
+        <span class="dot">5</span>Selesai      </li>
+      </ol>
+</div>
+
+<div class="grid-2">
+  <div class="stack">
+
+  
+      <div class="alert alert-success"><span><strong>Transaksi selesai</strong> 30 Okt 2026. Kamu mendapat +15 Loop Points dari transaksi ini.</span></div>
+
+    
+          <section class="card">
+        <div class="card-title"><h2>Rating transaksi ini</h2></div>
+        <ul class="item-list">
+                      <li class="item-row" style="align-items:flex-start">
+              <div class="info"><strong>Rating darimu</strong><span class="stars" aria-label="Rating 5 dari 5"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg></span> <small>31 Okt 2026</small>
+                <p style="margin:6px 0 0">Pembayaran cepat, terima kasih!</p>                </div>
+            </li>
+                      <li class="item-row" style="align-items:flex-start">
+              <div class="info"><strong>Rating dari Sari Wulandari</strong><span class="stars" aria-label="Rating 5 dari 5"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg></span> <small>31 Okt 2026</small>
+                <p style="margin:6px 0 0">Barang sesuai deskripsi, ketemuan tepat waktu.</p>                </div>
+            </li>
+                  </ul>
+      </section>
+      
+  <!-- Riwayat status -->
+  <section class="card">
+    <div class="card-title"><h2>Riwayat</h2></div>
+    <ul class="item-list small">
+      <li class="item-row"><div class="info"><strong>Request disetujui</strong><small>28 Okt 2026, 12.19</small></div></li>
+              <li class="item-row"><div class="info"><strong>Pembeli memilih COD</strong><small>29 Okt 2026, 12.19</small></div></li>
+                          <li class="item-row"><div class="info"><strong>Pembayaran dikonfirmasi penjual</strong><small>30 Okt 2026, 12.19</small></div></li>
+                    <li class="item-row"><div class="info"><strong>Barang diterima</strong><small>30 Okt 2026, 12.19</small></div></li>
+                          <li class="item-row"><div class="info"><strong>Transaksi selesai</strong><small>30 Okt 2026, 12.19</small></div></li>
+                </ul>
+  </section>
+  </div>
+
+  <aside class="stack">
+    <section class="card">
+      <div class="item-row" style="padding:0 0 14px">
+        <div class="mini-thumb"><div class="thumb "><img src="assets/img/listings/listing-12.jpg" alt="" loading="lazy"></div></div>
+        <div class="info"><a href="listing-12.html"><strong>Modul Statistika Bisnis</strong></a><small> Kantin kampus</small></div>
+      </div>
+              <div class="summary-list">
+          <div><span class="muted">Harga</span><span>Rp40.000</span></div>
+                    <div><span class="muted">Potongan voucher</span><span id="discountText">-Rp0</span></div>
+          <div class="total"><span>Total dibayar</span><span id="totalText">Rp40.000</span></div>
+        </div>
+                  </section>
+
+    <section class="card">
+      <div class="card-title"><h2>Pembeli</h2></div>
+      <div class="owner-row" style="margin-bottom:14px">
+        <span class="avatar">SW</span>
+        <div><strong>Sari Wulandari</strong><br>
+          <span class="stars" aria-label="Rating 5 dari 5"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-star"></use></svg></span> <span class="small muted">5 · 2 transaksi</span>
+          </div>
+      </div>
+          </section>
+
+        <section class="card">
+      <h2 style="font-size:1rem">Ada masalah?</h2>
+      <div style="display:grid;gap:8px">
+        <a href="report-transaction-6.html" class="btn btn-ghost btn-sm" style="justify-content:flex-start">Laporkan ke admin</a>
+              </div>
+    </section>
+      </aside>
+</div>
+
+    </main>
+  </div>
+</div>
+
+<nav class="bottom-nav" aria-label="Navigasi cepat">
+      <a href="dashboard.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-grid"></use></svg></span>
+      <span class="tab-label">Beranda</span>
+          </a>
+      <a href="browse.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg></span>
+      <span class="tab-label">Jelajahi</span>
+          </a>
+      <a href="listing-form.html" class="tab-main">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></span>
+      <span class="tab-label">Tawarkan</span>
+          </a>
+      <a href="transactions.html" class=" active" aria-current="page">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-receipt"></use></svg></span>
+      <span class="tab-label">Transaksi</span>
+      <span class="tab-badge">2</span>    </a>
+      <a href="profile.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-user"></use></svg></span>
+      <span class="tab-label">Akun</span>
+          </a>
+  </nav>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/static-demo.js"></script>
+</body>
+</html>

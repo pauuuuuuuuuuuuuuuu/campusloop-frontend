@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Kelola listing · CampusLoop</title>
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Menu aplikasi">
+    <a href="index.html" class="logo">
+      <img src="../assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+          <div class="side-label">Admin</div>
+      <ul class="side-nav">
+        <li><a href="index.html">Dashboard</a></li>        <li><a href="reports.html">Laporan &amp; moderasi<span class="pill">2</span></a></li>        <li><a href="users.html">Kelola user</a></li>        <li><a href="listings.html" class="active" aria-current="page">Kelola listing</a></li>        <li><a href="categories.html">Kategori</a></li>        <li><a href="rewards.html">Reward &amp; voucher</a></li>      </ul>
+      <div class="side-label">Lainnya</div>
+      <ul class="side-nav">
+        <li><a href="../index.html">Lihat situs</a></li>        <li>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d">            <button type="submit">Keluar</button>
+          </form>
+        </li>
+      </ul>
+      </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"></use></svg></button>
+
+              <strong class="topbar-title">Panel admin</strong>
+      
+      <a class="user-chip" href="index.html">
+        <span class="avatar">A</span>
+        <div>
+          <strong>Administrator</strong>
+          <small>Administrator</small>
+        </div>
+      </a>
+    </header>
+
+    <main class="app-content" id="konten">
+      
+<div class="app-head"><div><h1>Kelola listing</h1><p>Nonaktifkan listing yang melanggar aturan. Listing tidak dihapus permanen.</p></div></div>
+
+<form class="toolbar" method="get">
+  <div class="input-icon"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-search"></use></svg><input class="input" type="search" name="q" value="" placeholder="Cari judul atau pemilik"></div>
+  <select class="input" name="type" aria-label="Filter tipe">
+    <option value="">Semua tipe</option>
+    <option value="sell" >Jual</option><option value="donate" >Donasi</option><option value="borrow" >Pinjam</option>  </select>
+  <select class="input" name="status" aria-label="Filter status">
+    <option value="">Semua status</option>
+          <option value="available" >Tersedia</option>
+          <option value="reserved" >Dipesan</option>
+          <option value="in_progress" >Sedang dipinjam</option>
+          <option value="completed" >Selesai</option>
+          <option value="cancelled" >Dinonaktifkan</option>
+      </select>
+  <button class="btn btn-outline" type="submit">Terapkan</button>
+</form>
+
+<div class="card">
+  <div class="table-wrap">
+    <table class="table">
+      <thead><tr><th>Listing</th><th>Pemilik</th><th>Tipe</th><th>Harga</th><th>Status</th><th><span class="sr-only">Aksi</span></th></tr></thead>
+      <tbody>
+                          <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-coral"><img src="../assets/img/listings/listing-16.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Tas totebag kanvas</strong><small>20 Nov 2026 · Tas &amp; aksesori</small></div></div></td>
+            <td>Kevin Santoso</td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-16.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="16">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="16">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-indigo"><img src="../assets/img/listings/listing-14.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Lampu belajar LED lipat</strong><small>19 Nov 2026 · Elektronik</small></div></div></td>
+            <td>Raka Pratama</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp45.000</td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-14.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="14">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="14">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-indigo"><img src="../assets/img/listings/listing-15.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Casio fx-570EX</strong><small>19 Nov 2026 · Kalkulator</small></div></div></td>
+            <td>Dimas Aditya</td>
+            <td><span class="badge badge-borrow">Pinjam</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-15.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="15">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="15">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-indigo"><img src="../assets/img/listings/listing-07.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Mouse wireless Logitech M185</strong><small>18 Nov 2026 · Elektronik</small></div></div></td>
+            <td>Kevin Santoso</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp85.000</td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-7.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="7">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="7">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb "><img src="../assets/img/listings/listing-05.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Paket buku Pengantar Akuntansi 1 &amp; 2</strong><small>17 Nov 2026 · Buku</small></div></div></td>
+            <td>Sari Wulandari</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp90.000</td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-5.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="5">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="5">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-indigo"><img src="../assets/img/listings/listing-13.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>iPad 9th gen murah</strong><small>17 Nov 2026 · Elektronik</small></div></div></td>
+            <td>Kevin Santoso</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp1.500.000</td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-13.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="13">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="13">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-sun"><img src="../assets/img/listings/listing-04.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Meja lipat belajar</strong><small>16 Nov 2026 · Perabot kos</small></div></div></td>
+            <td>Dimas Aditya</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp60.000</td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-4.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="4">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="4">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb "><img src="../assets/img/listings/listing-02.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Calculus: Early Transcendentals (Stewart)</strong><small>15 Nov 2026 · Buku</small></div></div></td>
+            <td>Sari Wulandari</td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-2.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="2">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="2">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-indigo"><img src="../assets/img/listings/listing-01.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Casio fx-991ID Plus</strong><small>14 Nov 2026 · Kalkulator</small></div></div></td>
+            <td>Raka Pratama</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp75.000</td>
+            <td><span class="badge badge-warning">Dipesan</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-1.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="1">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-sun"><img src="../assets/img/listings/listing-10.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Set drawing pen &amp; penggaris</strong><small>13 Nov 2026 · Alat tulis</small></div></div></td>
+            <td>Sari Wulandari</td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-warning">Dipesan</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-10.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="10">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-coral"><img src="../assets/img/listings/listing-09.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Ransel laptop 15 inci</strong><small>12 Nov 2026 · Tas &amp; aksesori</small></div></div></td>
+            <td>Nadia Putri</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp120.000</td>
+            <td><span class="badge badge-warning">Dipesan</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-9.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="9">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-coral"><img src="../assets/img/listings/listing-06.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Kemeja batik almamater (L)</strong><small>11 Nov 2026 · Pakaian</small></div></div></td>
+            <td>Sari Wulandari</td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-6.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="6">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="6">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb "><img src="../assets/img/listings/listing-11.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Buku Fisika Dasar (Halliday) Jilid 1</strong><small>8 Nov 2026 · Buku</small></div></div></td>
+            <td>Nadia Putri</td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-11.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="11">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-indigo"><img src="../assets/img/listings/listing-08.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Kalkulator finansial HP 10bII+</strong><small>31 Okt 2026 · Kalkulator</small></div></div></td>
+            <td>Nadia Putri</td>
+            <td><span class="badge badge-borrow">Pinjam</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-warning">Dalam transaksi</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-8.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="8">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb "><img src="../assets/img/listings/listing-12.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Modul Statistika Bisnis</strong><small>25 Okt 2026 · Buku</small></div></div></td>
+            <td>Nadia Putri</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp40.000</td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-12.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="12">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb "><img src="../assets/img/listings/listing-03.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Jas lab putih ukuran M</strong><small>11 Okt 2026 · Alat praktikum</small></div></div></td>
+            <td>Nadia Putri</td>
+            <td><span class="badge badge-borrow">Pinjam</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-3.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="3">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                                  <form action="#demo-admin" method="post" onsubmit="return confirm('Nonaktifkan listing ini? Request yang menunggu akan ditolak.')">
+                    <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_status"><input type="hidden" name="status" value="cancelled">
+                    <input type="hidden" name="listing_id" value="3">
+                    <button class="btn btn-danger btn-sm" type="submit">Nonaktifkan</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-sun"><img src="../assets/img/listings/listing-19.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Rak buku kecil 3 susun</strong><small>9 Okt 2026 · Perabot kos</small></div></div></td>
+            <td>Nadia Putri</td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-19.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="19">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb t-indigo"><img src="../assets/img/listings/listing-18.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Flashdisk 32GB</strong><small>5 Okt 2026 · Elektronik</small></div></div></td>
+            <td>Nadia Putri</td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp50.000</td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-18.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="18">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td><div class="item-row" style="padding:0;border:0"><div class="mini-thumb"><div class="thumb "><img src="../assets/img/listings/listing-17.jpg" alt="" loading="lazy"></div></div><div class="info"><strong>Buku Pengantar Manajemen</strong><small>1 Okt 2026 · Buku</small></div></div></td>
+            <td>Nadia Putri</td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-ghost btn-sm" href="../listing-17.html" title="Lihat"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                <form action="#demo-admin" method="post" enctype="multipart/form-data" class="photo-form">
+                  <input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d"><input type="hidden" name="do" value="listing_photo">
+                  <input type="hidden" name="listing_id" value="17">
+                  <label class="btn btn-outline btn-sm">Ganti foto
+                    <input type="file" name="image" accept="image/jpeg,image/png" class="sr-only" onchange="this.form.submit()">
+                  </label>
+                </form>
+                              </div>
+            </td>
+          </tr>
+              </tbody>
+    </table>
+  </div>
+</div>
+
+    </main>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/static-demo.js"></script>
+</body>
+</html>

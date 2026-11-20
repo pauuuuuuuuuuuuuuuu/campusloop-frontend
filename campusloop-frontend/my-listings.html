@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Listing saya · CampusLoop</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Menu aplikasi">
+    <a href="dashboard.html" class="logo">
+      <img src="assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+          <div class="side-label">Utama</div>
+      <ul class="side-nav">
+        <li><a href="dashboard.html">Dashboard</a></li>        <li><a href="browse.html">Jelajahi barang</a></li>        <li><a href="loopguide.html">LoopGuide</a></li>      </ul>
+      <div class="side-label">Aktivitas saya</div>
+      <ul class="side-nav">
+        <li><a href="my-listings.html" class="active" aria-current="page">Listing saya</a></li>        <li><a href="requests.html">Request<span class="pill">2</span></a></li>        <li><a href="transactions.html">Transaksi</a></li>      </ul>
+      <div class="side-label">Akun</div>
+      <ul class="side-nav">
+        <li><a href="points.html">Loop Points</a></li>        <li><a href="leaderboard.html">Peringkat</a></li>        <li><a href="vouchers.html">Voucher saya</a></li>        <li><a href="profile.html">Profil</a></li>        <li>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14">            <button type="submit">Keluar</button>
+          </form>
+        </li>
+      </ul>
+      <a href="points.html" class="side-points">
+        <span class="small muted">Saldo Loop Points</span>
+        <span class="num">105</span>
+        <span class="small muted">
+          95 poin lagi ke voucher Rp10.000        </span>
+      </a>
+      </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+
+              <form class="search input-icon" action="browse.html" method="get" role="search">
+          <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg>          <input class="input" type="search" name="q" value="" placeholder="Cari buku, kalkulator, jas lab..." aria-label="Cari barang">
+        </form>
+        <a href="listing-form.html" class="btn btn-primary topbar-cta"><span>Tawarkan barang</span></a>
+      
+      <a class="user-chip" href="profile.html">
+        <span class="avatar">NP</span>
+        <div>
+          <strong>Nadia Putri</strong>
+          <small>Information Systems</small>
+        </div>
+      </a>
+    </header>
+
+    <main class="app-content" id="konten">
+      
+<div class="app-head">
+  <div><h1>Listing saya</h1><p>Barang yang kamu tawarkan. Listing yang sedang dalam transaksi tidak bisa diedit.</p></div>
+  <a href="listing-form.html" class="btn btn-primary">Tawarkan barang</a>
+</div>
+
+<form class="toolbar" method="get">
+  <select class="input" name="status" aria-label="Filter status" onchange="this.form.submit()">
+    <option value="">Semua status</option>
+          <option value="available" >Tersedia</option>
+          <option value="reserved" >Dalam transaksi</option>
+          <option value="completed" >Selesai</option>
+          <option value="cancelled" >Dinonaktifkan</option>
+      </select>
+</form>
+
+<div class="card">
+    <div class="table-wrap">
+    <table class="table">
+      <thead><tr><th>Barang</th><th>Tipe</th><th>Harga</th><th>Status</th><th>Diunggah</th><th><span class="sr-only">Aksi</span></th></tr></thead>
+      <tbody>
+                  <tr>
+            <td>
+              <div class="item-row" style="padding:0;border:0">
+                <div class="mini-thumb"><div class="thumb t-coral"><img src="assets/img/listings/listing-09.jpg" alt="" loading="lazy"></div></div>
+                <div class="info"><strong>Ransel laptop 15 inci</strong><small>Lobi gedung kampus</small></div>
+              </div>
+            </td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp120.000</td>
+            <td><span class="badge badge-warning">Dipesan</span></td>
+            <td class="muted">12 Nov 2026</td>
+            <td>
+              <div class="actions">
+                <a href="listing-9.html" class="btn btn-ghost btn-sm" title="Lihat"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                                  <a href="transactions.html" class="btn btn-outline btn-sm">Lihat transaksi</a>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td>
+              <div class="item-row" style="padding:0;border:0">
+                <div class="mini-thumb"><div class="thumb "><img src="assets/img/listings/listing-11.jpg" alt="" loading="lazy"></div></div>
+                <div class="info"><strong>Buku Fisika Dasar (Halliday) Jilid 1</strong><small>Perpustakaan lt. 1</small></div>
+              </div>
+            </td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td class="muted">8 Nov 2026</td>
+            <td>
+              <div class="actions">
+                <a href="listing-11.html" class="btn btn-ghost btn-sm" title="Lihat"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td>
+              <div class="item-row" style="padding:0;border:0">
+                <div class="mini-thumb"><div class="thumb t-indigo"><img src="assets/img/listings/listing-08.jpg" alt="" loading="lazy"></div></div>
+                <div class="info"><strong>Kalkulator finansial HP 10bII+</strong><small>Perpustakaan lt. 1</small></div>
+              </div>
+            </td>
+            <td><span class="badge badge-borrow">Pinjam</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-warning">Dalam transaksi</span></td>
+            <td class="muted">31 Okt 2026</td>
+            <td>
+              <div class="actions">
+                <a href="listing-8.html" class="btn btn-ghost btn-sm" title="Lihat"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                                  <a href="transactions.html" class="btn btn-outline btn-sm">Lihat transaksi</a>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td>
+              <div class="item-row" style="padding:0;border:0">
+                <div class="mini-thumb"><div class="thumb "><img src="assets/img/listings/listing-12.jpg" alt="" loading="lazy"></div></div>
+                <div class="info"><strong>Modul Statistika Bisnis</strong><small>Kantin kampus</small></div>
+              </div>
+            </td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp40.000</td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td class="muted">25 Okt 2026</td>
+            <td>
+              <div class="actions">
+                <a href="listing-12.html" class="btn btn-ghost btn-sm" title="Lihat"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td>
+              <div class="item-row" style="padding:0;border:0">
+                <div class="mini-thumb"><div class="thumb "><img src="assets/img/listings/listing-03.jpg" alt="" loading="lazy"></div></div>
+                <div class="info"><strong>Jas lab putih ukuran M</strong><small>Lobi gedung kampus · <b style="color:var(--sun-600)">2 request baru</b></small></div>
+              </div>
+            </td>
+            <td><span class="badge badge-borrow">Pinjam</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-success">Tersedia</span></td>
+            <td class="muted">11 Okt 2026</td>
+            <td>
+              <div class="actions">
+                <a href="listing-3.html" class="btn btn-ghost btn-sm" title="Lihat"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                                  <a href="listing-form-3.html" class="btn btn-outline btn-sm">Edit</a>
+                  <form action="#demo-listing_delete" method="post" onsubmit="return confirm('Hapus listing ini? Listing tidak akan tampil lagi dan request yang menunggu ditolak.')">
+                    <input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14"><input type="hidden" name="listing_id" value="3">
+                    <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                  </form>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td>
+              <div class="item-row" style="padding:0;border:0">
+                <div class="mini-thumb"><div class="thumb t-sun"><img src="assets/img/listings/listing-19.jpg" alt="" loading="lazy"></div></div>
+                <div class="info"><strong>Rak buku kecil 3 susun</strong><small>Kos dekat kampus</small></div>
+              </div>
+            </td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td class="muted">9 Okt 2026</td>
+            <td>
+              <div class="actions">
+                <a href="listing-19.html" class="btn btn-ghost btn-sm" title="Lihat"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td>
+              <div class="item-row" style="padding:0;border:0">
+                <div class="mini-thumb"><div class="thumb t-indigo"><img src="assets/img/listings/listing-18.jpg" alt="" loading="lazy"></div></div>
+                <div class="info"><strong>Flashdisk 32GB</strong><small>Lobi gedung kampus</small></div>
+              </div>
+            </td>
+            <td><span class="badge badge-sell">Jual</span></td>
+            <td>Rp50.000</td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td class="muted">5 Okt 2026</td>
+            <td>
+              <div class="actions">
+                <a href="listing-18.html" class="btn btn-ghost btn-sm" title="Lihat"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                              </div>
+            </td>
+          </tr>
+                  <tr>
+            <td>
+              <div class="item-row" style="padding:0;border:0">
+                <div class="mini-thumb"><div class="thumb "><img src="assets/img/listings/listing-17.jpg" alt="" loading="lazy"></div></div>
+                <div class="info"><strong>Buku Pengantar Manajemen</strong><small>Perpustakaan lt. 1</small></div>
+              </div>
+            </td>
+            <td><span class="badge badge-donate">Donasi</span></td>
+            <td><span class="muted">Gratis</span></td>
+            <td><span class="badge badge-neutral">Selesai</span></td>
+            <td class="muted">1 Okt 2026</td>
+            <td>
+              <div class="actions">
+                <a href="listing-17.html" class="btn btn-ghost btn-sm" title="Lihat"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-eye"></use></svg><span class="sr-only">Lihat</span></a>
+                              </div>
+            </td>
+          </tr>
+              </tbody>
+    </table>
+  </div>
+  </div>
+<p class="hint">Menghapus listing hanya menyembunyikannya (status menjadi dinonaktifkan), riwayat transaksi tetap tersimpan.</p>
+
+    </main>
+  </div>
+</div>
+
+<nav class="bottom-nav" aria-label="Navigasi cepat">
+      <a href="dashboard.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-grid"></use></svg></span>
+      <span class="tab-label">Beranda</span>
+          </a>
+      <a href="browse.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg></span>
+      <span class="tab-label">Jelajahi</span>
+          </a>
+      <a href="listing-form.html" class="tab-main active" aria-current="page">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></span>
+      <span class="tab-label">Tawarkan</span>
+          </a>
+      <a href="transactions.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-receipt"></use></svg></span>
+      <span class="tab-label">Transaksi</span>
+      <span class="tab-badge">2</span>    </a>
+      <a href="profile.html" class="">
+      <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-user"></use></svg></span>
+      <span class="tab-label">Akun</span>
+          </a>
+  </nav>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/static-demo.js"></script>
+</body>
+</html>

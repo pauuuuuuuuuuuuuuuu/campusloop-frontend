@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusLoop: tempat mahasiswa menjual, mendonasikan, dan meminjamkan barang kuliah yang masih layak pakai.">
+  <meta name="theme-color" content="#1A5E4F">
+  <title>Dashboard admin · CampusLoop</title>
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#konten">Lewati ke konten</a>
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Menu aplikasi">
+    <a href="index.html" class="logo">
+      <img src="../assets/img/logo.svg" alt=""><span class="logo-text">campus<span>loop</span></span>
+    </a>
+
+          <div class="side-label">Admin</div>
+      <ul class="side-nav">
+        <li><a href="index.html" class="active" aria-current="page">Dashboard</a></li>        <li><a href="reports.html">Laporan &amp; moderasi<span class="pill">2</span></a></li>        <li><a href="users.html">Kelola user</a></li>        <li><a href="listings.html">Kelola listing</a></li>        <li><a href="categories.html">Kategori</a></li>        <li><a href="rewards.html">Reward &amp; voucher</a></li>      </ul>
+      <div class="side-label">Lainnya</div>
+      <ul class="side-nav">
+        <li><a href="../index.html">Lihat situs</a></li>        <li>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="942ea5946aa88e61a083bfc71503361d">            <button type="submit">Keluar</button>
+          </form>
+        </li>
+      </ul>
+      </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"></use></svg></button>
+
+              <strong class="topbar-title">Panel admin</strong>
+      
+      <a class="user-chip" href="index.html">
+        <span class="avatar">A</span>
+        <div>
+          <strong>Administrator</strong>
+          <small>Administrator</small>
+        </div>
+      </a>
+    </header>
+
+    <main class="app-content" id="konten">
+      
+<div class="app-head"><div><h1>Dashboard admin</h1><p>Ringkasan aktivitas CampusLoop.</p></div></div>
+
+  <div class="next-step"><div class="text"><strong>2 laporan menunggu tindakan</strong><span class="small">Laporan "no-show" dan masalah pembayaran sebaiknya ditinjau dalam 1x24 jam.</span></div><a href="reports.html" class="btn btn-outline btn-sm">Tinjau laporan</a></div>
+
+<div class="stat-grid">
+  <div class="stat"><div class="s-icon"></div><div><div class="value">17</div><p class="label">Mahasiswa terdaftar</p></div></div>
+  <div class="stat"><div class="s-icon indigo"></div><div><div class="value">10</div><p class="label">Listing tersedia</p></div></div>
+  <div class="stat"><div class="s-icon coral"></div><div><div class="value">6</div><p class="label">Transaksi selesai · 4 berjalan</p></div></div>
+  <div class="stat"><div class="s-icon sun"></div><div><div class="value">3</div><p class="label">Barang didonasikan</p></div></div>
+</div>
+
+<div class="grid-2">
+  <section class="card">
+    <div class="card-title"><h2>Laporan terbaru</h2><a href="reports.html" class="small">Semua laporan</a></div>
+          <ul class="item-list">
+                  <li class="item-row">
+            <span class="avatar" style="border-radius:10px;background:#F8E3DF;color:var(--danger)"></span>
+            <div class="info"><strong>Tidak datang saat janji temu</strong>
+              <small>User: Kevin Santoso · oleh Nadia Putri</small></div>
+            <span class="badge badge-warning">Menunggu</span>          </li>
+                  <li class="item-row">
+            <span class="avatar" style="border-radius:10px;background:#F8E3DF;color:var(--danger)"></span>
+            <div class="info"><strong>Listing menyesatkan</strong>
+              <small>Listing: iPad 9th gen murah · oleh Raka Pratama</small></div>
+            <span class="badge badge-info">Ditinjau</span>          </li>
+                  <li class="item-row">
+            <span class="avatar" style="border-radius:10px;background:#F8E3DF;color:var(--danger)"></span>
+            <div class="info"><strong>Perilaku mencurigakan</strong>
+              <small>User: Kevin Santoso · oleh Sari Wulandari</small></div>
+            <span class="badge badge-neutral">Ditolak</span>          </li>
+              </ul>
+      </section>
+
+  <div class="stack">
+    <section class="card">
+      <div class="card-title"><h2>Listing tersedia per tipe</h2></div>
+              <div style="margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between" class="small"><span>Jual</span><strong>5</strong></div>
+          <div class="progress"><span style="width:50%;background:var(--green-700)"></span></div>
+        </div>
+              <div style="margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between" class="small"><span>Donasi</span><strong>3</strong></div>
+          <div class="progress"><span style="width:30%;background:var(--coral-600)"></span></div>
+        </div>
+              <div style="margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between" class="small"><span>Pinjam</span><strong>2</strong></div>
+          <div class="progress"><span style="width:20%;background:var(--indigo-600)"></span></div>
+        </div>
+            <p class="hint">Dari 10 listing tersedia.</p>
+    </section>
+    <section class="card">
+      <div class="card-title"><h2>Kategori terpopuler</h2></div>
+              <div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between" class="small"><span>Buku</span><strong>5</strong></div>
+          <div class="progress"><span style="width:100%;background:var(--sun-500)"></span></div>
+        </div>
+              <div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between" class="small"><span>Elektronik</span><strong>4</strong></div>
+          <div class="progress"><span style="width:80%;background:var(--sun-500)"></span></div>
+        </div>
+              <div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between" class="small"><span>Kalkulator</span><strong>3</strong></div>
+          <div class="progress"><span style="width:60%;background:var(--sun-500)"></span></div>
+        </div>
+              <div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between" class="small"><span>Tas &amp; aksesori</span><strong>2</strong></div>
+          <div class="progress"><span style="width:40%;background:var(--sun-500)"></span></div>
+        </div>
+              <div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between" class="small"><span>Perabot kos</span><strong>2</strong></div>
+          <div class="progress"><span style="width:40%;background:var(--sun-500)"></span></div>
+        </div>
+            <p class="hint">0 voucher sudah ditukar.</p>
+    </section>
+  </div>
+</div>
+
+    </main>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/static-demo.js"></script>
+</body>
+</html>
