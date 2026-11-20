@@ -23,14 +23,14 @@
 
           <div class="side-label">Utama</div>
       <ul class="side-nav">
-        <li><a href="dashboard.html">Dashboard</a></li>        <li><a href="browse.html">Jelajahi barang</a></li>        <li><a href="loopguide.html">LoopGuide</a></li>      </ul>
+        <li><a href="dashboard.html">Dashboard</a></li>        <li><a href="browse-in.html">Jelajahi barang</a></li>        <li><a href="loopguide.html">LoopGuide</a></li>      </ul>
       <div class="side-label">Aktivitas saya</div>
       <ul class="side-nav">
         <li><a href="my-listings.html">Listing saya</a></li>        <li><a href="requests.html">Request<span class="pill">2</span></a></li>        <li><a href="transactions.html" class="active" aria-current="page">Transaksi</a></li>      </ul>
       <div class="side-label">Akun</div>
       <ul class="side-nav">
         <li><a href="points.html">Loop Points</a></li>        <li><a href="leaderboard.html">Peringkat</a></li>        <li><a href="vouchers.html">Voucher saya</a></li>        <li><a href="profile.html">Profil</a></li>        <li>
-          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14">            <button type="submit">Keluar</button>
+          <form action="#demo-logout" method="post"><input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79">            <button type="submit">Keluar</button>
           </form>
         </li>
       </ul>
@@ -46,7 +46,7 @@
     <header class="topbar">
       <button class="side-toggle" id="sideToggle" aria-label="Buka menu" aria-expanded="false"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
 
-              <form class="search input-icon" action="browse.html" method="get" role="search">
+              <form class="search input-icon" action="browse-in.html" method="get" role="search">
           <svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg>          <input class="input" type="search" name="q" value="" placeholder="Cari buku, kalkulator, jas lab..." aria-label="Cari barang">
         </form>
         <a href="listing-form.html" class="btn btn-primary topbar-cta"><span>Tawarkan barang</span></a>
@@ -72,7 +72,7 @@
 <div class="grid-2">
   <form class="card" action="#demo-report_save" method="post" enctype="multipart/form-data" novalidate
         onsubmit="var ok = setError('category', document.getElementById('category').value === '' ? 'Pilih jenis masalah.' : ''); return setError('reason', document.getElementById('reason').value.trim().length < 15 ? 'Ceritakan minimal 15 karakter.' : '') && ok;">
-    <input type="hidden" name="csrf" value="3705384e2ed83e3eb8418099b1b2ea14">    <input type="hidden" name="listing_id" value="10">
+    <input type="hidden" name="csrf" value="426274562d6e3877eef6e3e6b6d7bb79">    <input type="hidden" name="listing_id" value="10">
     <input type="hidden" name="transaction_id" value="0">
     <input type="hidden" name="user_id" value="0">
 
@@ -134,7 +134,7 @@
       <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-grid"></use></svg></span>
       <span class="tab-label">Beranda</span>
           </a>
-      <a href="browse.html" class="">
+      <a href="browse-in.html" class="">
       <span class="tab-dot"><svg class="icon " aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg></span>
       <span class="tab-label">Jelajahi</span>
           </a>
